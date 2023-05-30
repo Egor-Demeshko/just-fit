@@ -1,0 +1,37 @@
+:root{
+  --hard-black: #000000;
+  --black: rgba(0, 0, 0, 50%);
+  --light-black: rgba(0, 0, 0, 25%);
+  --icons-white: #FFFFFF;
+  --icons-main-red: #F17C70;
+  --icons-light-red: #FFA49B;
+  --light-grey: #F2F2F2;
+
+  --background-pink: #FEDDDA;
+  --background-main-white: #FCFCFC;
+  --background-grey: #C8BDC0;
+  --grey-border: #D9D9D9;
+  --background-green: #DAD255;
+  --background-orange50: #FFBB0C7E;
+  --background-red50: #F17C707E;
+
+  --border-dark-green: #099525;
+
+  --goods-accent-orange: #FF9A03;
+  --goods-light-orange: #FFD08A;
+
+  --transparent: #7b0c0c70;
+
+  /*темы теней*/
+  --main-shadow: 0 0 4px var(--black);
+  --main-shadow-spread: 0 0 6px 2px var(--black);
+  --unknown: 0 -4px 4px var(--light-black);
+  --navigationBar-shadow: 0 -2px 4px var(--black);
+  --inner-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+  --what-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  --orange-shadow: 0 0 4px var(--goods-accent-orange);
+
+
+  /*background's gradient's*/
+  --main: linear-gradient(to bottom, var(--background-orange50), var(--background-red50));
+}

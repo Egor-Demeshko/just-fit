@@ -1,0 +1,24 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="light" viewBox="0 0 36 36">
+      <path d="M17 11C19.4853 11 21.5 8.98528 21.5 6.5C21.5 4.01472 19.4853 2 17 2C14.5147 2 12.5 4.01472 12.5 6.5C12.5 8.98528 14.5147 11 17 11ZM17 11V32M17 32C13.0218 32 9.20644 30.4196 6.3934 27.6066C3.58035 24.7936 2 20.9782 2 17H6.5M17 32C20.9782 32 24.7936 30.4196 27.6066 27.6066C30.4196 24.7936 32 20.9782 32 17H27.5" stroke="#FCFCFC" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/>
+    </symbol>
+    <symbol id="soft" fill="none" viewbox="0 0 40 40">
+      <path d="M38 38.5C38 38.5 19.7452 28.6294 9 9" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M29.9823 36.9511C19.1753 37.3683 14.0147 30.7185 14.0147 30.7185" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M25.7248 26.2448C25.2181 19.728 27.6413 16.5723 27.6413 16.5723C35.6436 25.3163 35.2557 31.2115 34.599 33.5532" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M22.5417 30.7185C18.0275 29.6193 13.8683 27.3866 10.4576 24.2315C3.14554 17.5118 2.14918 7.92754 2 3.99998C1.99143 3.74113 2 2.99997 2.5 2.50001C2.5 2.50001 2.80295 2.1681 3 2.00001C3.19705 1.83193 3.74954 1.56591 4 1.49997C4.25046 1.43403 5.24573 1.45073 5.5 1.5C20.8884 4.53579 24.3589 17.2283 24.3589 17.2283" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+
+    <symbol id="fit" fill="none" viewbox="0 0 66 48">
+      <path d="M15.25 1.25C23.25 7.25 24.25 13.75 24.25 23.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M15.25 46.25C23.25 40.25 24.25 33.75 24.25 23.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M50.25 1.25C42.25 7.25 41.25 13.75 41.25 23.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M50.25 46.25C42.25 40.25 41.25 33.75 41.25 23.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M1 41.25H11.5M11.5 41.25L6.25 36M11.5 41.25L6.25 46.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64.5 41.25H54M54 41.25L59.25 36M54 41.25L59.25 46.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M1 6.25H11.5M11.5 6.25L6.25 1M11.5 6.25L6.25 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M64.5 6.25H54M54 6.25L59.25 1M54 6.25L59.25 11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>

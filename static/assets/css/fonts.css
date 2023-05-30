@@ -1,0 +1,35 @@
+@font-face{
+  font-family: "Inter";
+  src: url("../fonts/Inter.ttf");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Ubuntu-Bold";
+  src: url("../fonts/Ubuntu-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "LexendDeca";
+  src: url("../fonts/LexendDeca-Variable.ttf");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Pacifico";
+  src: url("../fonts/Pacifico-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Literata";
+  src: url("../fonts/Literata.ttf");
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Ubuntu";
+  src: url("../fonts/Ubuntu.ttf");
+  font-display: swap;
+}

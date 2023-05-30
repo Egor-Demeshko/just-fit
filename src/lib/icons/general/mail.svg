@@ -1,0 +1,8 @@
+<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="mail" viewBox="0 0 84 67">
+      <path d="M72.3194 3H11.6649C6.87942 3 3 6.87942 3 11.6649V54.9896C3 59.7751 6.87942 63.6545 11.6649 63.6545H72.3194C77.1049 63.6545 80.9844 59.7751 80.9844 54.9896V11.6649C80.9844 6.87942 77.1049 3 72.3194 3Z" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M3.01562 12.2922L42.0078 38.287L81 12.2922" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/>
+    </symbol>
+  </defs>
+</svg>

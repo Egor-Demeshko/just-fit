@@ -1,0 +1,14 @@
+:root{
+  --bar-height: 90px;
+  --card-border-radius: 10px;
+  --image-width: 362px;
+  --mobile: 490px;
+  --pcWidth: 16px * 6.5 + 1.1vw;
+  --font-size: clamp(1rem, 0.5rem + 0.98vw, 1.5rem);
+}
+
+@media screen and (max-width: 370px){
+    :root{
+      --image-width: 346px;
+    }
+}

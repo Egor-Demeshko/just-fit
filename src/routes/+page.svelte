@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+    import BottomBar from '$lib/components/BottomBar/BottomBar.svelte';
+    import UpperBar from '$lib/components/UpperBar.svelte';
+</script>    
+
+<UpperBar/>
+
+<BottomBar/>
+
+
+<style>
+
+</style>

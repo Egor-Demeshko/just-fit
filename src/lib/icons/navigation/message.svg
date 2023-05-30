@@ -1,0 +1,7 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <symbol id="message" width="50" height="50" fill="transparent">
+      <path d="M48 32.6667C48 34.0222 47.4615 35.3222 46.503 36.2808C45.5445 37.2393 44.2444 37.7778 42.8889 37.7778H12.2222L2 48V7.11111C2 5.75556 2.53849 4.45553 3.49701 3.49701C4.45553 2.53849 5.75556 2 7.11111 2H42.8889C44.2444 2 45.5445 2.53849 46.503 3.49701C47.4615 4.45553 48 5.75556 48 7.11111V32.6667Z" fill="#C8BDC0" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </defs>
+</svg>
