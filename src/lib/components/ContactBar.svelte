@@ -39,8 +39,8 @@ address{
   z-index: 3;
 }
 
-@media(min-width: 52em){
-  .address{
+@media (min-width: 52em){
+  address{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -66,6 +66,7 @@ address{
     height: 100%;
     color: var(--icons-white);
     width: 100%;
+    transition: filter 600ms ease;
   }
 
   a:hover svg{

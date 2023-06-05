@@ -24,5 +24,34 @@
         <symbol id="a1" viewBox="0 0 52 37">
             <path d="M22.856 22.144L17.048 7.36L11.192 22.144H22.856ZM33.992 36.256H28.424L24.776 27.088H9.224L5.528 36.256H0.00800008L14.6 0.447997H19.832L33.992 36.256ZM51.3234 36.256H46.1394V7.12L41.6274 10.912L38.6034 7.6L47.0034 0.447997H51.3234V36.256Z" fill="currentColor"/>
         </symbol>
+
+        <symbol id="minus">
+            <path d="M1.99998 19.5H37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="minus_small" viewBox="0 0 28 9">
+            <path d="M4 4.64325H23.5" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="plus_small" viewBox="0 0 27 27">
+            <path d="M13.913 4.67072V22.6158M4 13.6433H23" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+
+        <symbol id="plus" viewBox="0 0 39 39">
+            <path d="M19.5 2V37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.99999 19.5H37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="cancel" viewBox="0 0 49 49">
+            <path d="M2.55713 2.44286L42.5431 42.4289M3.99301 40.993L41.1071 3.8789" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+
+        <symbol id="copy" width="100%" height="100%" viewBox="0 0 30 30">
+            <rect fill="none"/>
+            <path d="M25 11.25H13.75C12.3693 11.25 11.25 12.3693 11.25 13.75V25C11.25 26.3807 12.3693 27.5 13.75 27.5H25C26.3807 27.5 27.5 26.3807 27.5 25V13.75C27.5 12.3693 26.3807 11.25 25 11.25Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/>
+            <path d="M6.25 18.75H5C4.33696 18.75 3.70107 18.4866 3.23223 18.0178C2.76339 17.5489 2.5 16.913 2.5 16.25V5C2.5 4.33696 2.76339 3.70107 3.23223 3.23223C3.70107 2.76339 4.33696 2.5 5 2.5H16.25C16.913 2.5 17.5489 2.76339 18.0178 3.23223C18.4866 3.70107 18.75 4.33696 18.75 5V6.25" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
+            fill="transparent"/>
+        </symbol>
     </defs>
 </svg>

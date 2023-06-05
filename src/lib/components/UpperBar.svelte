@@ -1,3 +1,22 @@
+<script>
+    import { menuOpen } from "$lib/scripts/stores.js";
+    import { onMount } from "svelte"; 
+
+
+    
+  function openMenu(){
+      menuOpen.update( (value) => {
+        if(value) return false;
+        if(!value) return true;
+      });
+    }
+
+    
+
+    
+</script>
+
+
 <header class="upperBar">
 
     <address>
@@ -14,9 +33,10 @@
 
 
     <div class="right">
-        <a class="mail" href="mailto:contact@jf.by">contact@jf.by</a>
-        <div class="menu" aria-label="иконка меню">
-            <svg class="icon">
+        <a class="mail" href="mailto:contact@jf.by" aria-label="написать на почту"
+        >contact@jf.by</a>
+        <div class="menu" aria-label="открывает меню" role="button" on:click={openMenu}>
+            <svg class="icon" aria-disabled="true">
                 <use href="/src/lib/icons/navigation.svg#menu"></use>
             </svg>
         </div>
@@ -35,7 +55,7 @@
         --border: 2px var(--icons-white) solid;
     }
 
-    .upperBar{
+    .upperBar {
         padding: 18px 24px;
         display: flex;
         justify-content: center;

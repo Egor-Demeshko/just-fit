@@ -193,7 +193,7 @@
     display: flex;
   }
 
-  .icon svg{
+  svg{
     height: 100%;
     transition: color 600ms ease;
   }
@@ -222,8 +222,11 @@
       max-width: 100%;
     }
 
-    .icon:hover svg{
+    svg{
       transition: all 600ms ease;
+    }
+
+    .icon:hover svg{
       filter: drop-shadow(var(--orange-shadow));
     }
   }

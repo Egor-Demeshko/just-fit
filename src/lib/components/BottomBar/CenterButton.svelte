@@ -1,4 +1,4 @@
-<a href="TODO" role="button" aria-label="Корзина">
+<a href="/cart" role="button" aria-label="перейти на страницу корзины">
     <svg aria-hidden="true">
         <use href={"/src/lib/icons/navigation.svg#cart_icon"}></use>
     </svg>
