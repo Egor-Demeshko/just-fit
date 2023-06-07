@@ -1,9 +1,19 @@
 <script>
     import { submitPending } from "$lib/scripts/stores.js";
+    import { isMesure, measureSMSvarificationState } from "$lib/scripts/stores.js";
+
+
+    /**@type {boolean}
+     * @description использует при установке компонента
+     * на страницы мерок, так как там требуется сразу диактивация 
+     * зеленной кнопки
+    */
 
     let inactive = 'inactive';
     let active = 'active';
-    let disabled = false;
+    let disabled;
+    $: disabled = ($isMesure) ? true : false;
+
 
     function closeMenu(){}
 
@@ -15,6 +25,10 @@
             disabled = (isSubmiting) ? true : false;
         });
     }
+
+    measureSMSvarificationState.subscribe((isVerified) => {
+        if(isVerified) isMesure = false; 
+    });
 </script>    
 
 
@@ -89,9 +103,11 @@
         max-block-size: 100%;
     }
 
-    .right:disabled{
+    .right:disabled,
+    .right:disabled:hover{
         background-color: var(--light-grey);
         color: var(--black);
+        cursor: auto;
     }
 
     svg{

@@ -4,6 +4,7 @@ import { fields, measurementsSectors, measurements } from "$lib/server/formField
 
 
 export function load(){
+
     if(fields && measurementsSectors && measurements){
         return {
             "fields": fields,

@@ -1,37 +1,34 @@
 <script>
-
     import SimpleUpperBar from "../../lib/components/SimpleUpperBar.svelte";
     import LogIn from "$lib/components/Measurements/LogIn.svelte";
     import Input from "$lib/components/Measurements/Input.svelte";
     import Measurements from "$lib/components/Measurements/Measurements.svelte";
     import PopUp from "../../lib/components/PopUp.svelte";
-    import { popUpShow } from "$lib/scripts/stores.js";
+    import CartBottomBar from "$lib/components/CartElements/CartBottomBar.svelte";
+    import { isMeasureSubmit,  
+            isMesure } from "$lib/scripts/stores";
+    import ErrorMessage from "$lib/components/ErrorMessage.svelte";
+    import { submitPending } from "$lib/scripts/stores";
+
 
     export let data;
     let {fields, measurementsSectors, measurements} = data;
-    let message = false;
-    let sms = false;
+    let getSms; // временка для передачи функции
+    let form;
+    isMesure.set(true);
 
-    popUpShow.update( ( obj ) => {
-        if(obj.state){
-            if(obj.message){
-                message = true;
-            } else if (obj.sms){
-                sms = true;
-            }
-        } else {
-            message = false;
-            sms = false;
-        }
-    });
-
+    function gatherData(){
+        console.log('+page.svelte submitting form');
+        submitPending.set(true);
+        isMeasureSubmit.set(true);
+    };
 </script>
 
 <SimpleUpperBar/>
 <main>
-    <form>
+    <form bind:this={form}  on:submit|preventDefault={gatherData}>
 
-        <LogIn {fields}/>
+        <LogIn {fields} {getSms} {form}/>
         <Input id={"height"} 
                 type={"tel"}
                 placeholder={"Цифры в СМ, формат 000"}
@@ -42,11 +39,12 @@
             <Measurements {sector} measures={measurements[sector.id]}/>
         {/each}
 
+        <CartBottomBar/>
     </form>
 </main>
 
-<PopUp/>
-
+<PopUp bind:getSms={getSms}/>
+<ErrorMessage/>
 
 <style>
     *{

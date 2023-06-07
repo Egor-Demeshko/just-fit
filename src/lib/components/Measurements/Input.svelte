@@ -5,13 +5,14 @@
     export let type = "text";
     export let placeholder = "Цифры в СМ, формат 000";
     export let required = false;
-    export let pattern = '';
+    export let pattern = '.*';
     export let question = false;
     export let text = "Введите данные";
 
     let valid = '';
     let invalid = '';
     let input;
+
 
     function startValidation(){
         let reg = new RegExp(pattern);
@@ -28,15 +29,18 @@
         }
     }
 
+
     function setValid(){
         invalid = false;
         valid = true; 
     }
 
+
     function setInvalid(){
         valid = false;
         invalid = true;
     }
+
 
     function blurHandler(){
         startValidation();
@@ -44,7 +48,13 @@
 
 
     function showPopUp(){
-        popUpShow.update( value => !value );
+
+            popUpShow.set( {
+                "state": true,
+                "message": true,
+                "sms": false
+            } );
+
     }
 </script>
 
@@ -58,7 +68,7 @@
                 class:invalid 
                 type={type} name={id} id={id}
                 placeholder={placeholder} pattern={pattern}
-                required={required} 
+                required={required} autocomplete="tel"
                 on:keyup={startValidation}
                 on:invalid={setInvalid}
                 on:blur={blurHandler}>
@@ -69,7 +79,7 @@
             class:invalid 
             type={type} name={id} id={id}
             placeholder={placeholder} pattern={pattern}
-            required={required} 
+            required={required} autocomplete="off"
             on:keyup={startValidation}
             on:invalid={setInvalid}
             on:blur={blurHandler}>
@@ -83,6 +93,7 @@
         align-items: center;
         gap: 8px;
         width: 95%;
+        margin-top: var(--gap);
     }
 
     .input__wrapper::after{

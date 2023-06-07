@@ -9,12 +9,12 @@
     import InputId from "$lib/components/CartElements/InputId.svelte";
     import CartBottomBar from "$lib/components/CartElements/CartBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
+    import { setErrorMessage  } from "../../scripts/stores";
 
     export let form;
     let cartTotal = 0;
     let formElement;
     let cartId;
-    let show = ""; //переменная для управления отображением ErrorMessage
 
     /**@type {Array}*/
     let orders = [];
@@ -57,8 +57,11 @@
 
                 } else if(result.type == "failure") {
 
-                    show = "show";
-                    setTimeout( () => show = '', 7000);
+                    setErrorMessage.set({
+                        "show": "",
+                        "title": "Ошибка подтверждения заказа",
+                        "message": "Произошла ошибка подтверждения заказа. Пожалуйста, попробуйте еще раз. Или напишите нам в мессенджер"
+                    });
                 }
             }
         }
@@ -116,10 +119,7 @@ aria-label="Форма ввода и проверки вашего заказа 
 
     <CartBottomBar />
 
-    <ErrorMessage {show}>
-        <h3 slot="title">Ошибка подтверждения заказа</h3>
-        <span slot="message">Извините! Произошла ошибка. Попробуйте еще раз либо напишите нам или позвоните! Спасибо.</span>
-    </ErrorMessage>
+    <ErrorMessage/>
 </form>
 
 

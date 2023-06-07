@@ -1,17 +1,27 @@
 <script>
-    export let show = "";
+  import { setErrorMessage } from "$lib/scripts/stores";
+  let show = '';
+  $: show = $setErrorMessage.show;
+
+  console.log("значени show на компоненте  ", show);
+
+    $: if(show == "show"){
+      console.log("значени show поменялось");
+      setTimeout(() => show = '', 7500);
+    }
+
 
 </script>
 
-<div class="error-message" class:show aria-live="polite" aria-label="Сообщение об ошибке">
-    <slot name="title"><h3>ОШИБКА</h3></slot>
+<div class="error-message {show}" aria-live="polite" aria-label="Сообщение об ошибке">
+    <slot name="title"><h3>{$setErrorMessage.title}</h3></slot>
     <br>
-    <slot name="message" class="error-message__message"><span>Возникла неизвестная ошибка. Попробуйте запросить новый SMS код, или
-        свяжитесь с менеджерами компании.</span></slot>
+    <slot name="message" class="error-message__message"><span>{$setErrorMessage.message}</span></slot>
 </div>
 
 <style>
 .error-message{
+    display: none;
     font-family: LexendDeca, sans-serif;
     padding: 18px 24px;
     position: absolute;
@@ -25,6 +35,7 @@
 }
 
 .show{
+    display: block;
     animation: showMessage normal 7s forwards ease-out;
 }
 

@@ -1,15 +1,23 @@
 <script>
     import { popUpShow } from "$lib/scripts/stores.js";
+    import SmsForm from "$lib/components/Measurements/SmsForm.svelte";
+
+    export let getSms;
 
 
-    export let message = false;
-    export let sms = false;
+    let message = false;
+    let sms = false;
 
     let active = "";
-
-    $: if($popUpShow) {
+    
+    $: if($popUpShow.state) {
         active = "active";
+        if($popUpShow.message) message = true;
+        if($popUpShow.sms) sms = true;
     } else {
+
+        message = false;
+        sms = false;
         active = "";
     }
     
@@ -20,15 +28,29 @@
 
         {#if message}
             <p class="pop-up__text">Все Ваши мерки хранятся под идентификацонным номером.
-            Мы предполагаем Вам выбор, какой идентификацонный номер использовать.
-            Можно использовать сгенерированный сайтом  или использовать номер вашего мобильного телефона как ID. </p>
+            Индендификационным номером является ваш мобильный номер. 
+             </p>
             <p class="pop-up__text">Для того чтобы использовать номер вашего мобильного телефона как
                 идендификационный номер (учетный номер) для хранения ваших мерок,
                 достаточно в поле ввести ваш мобильный номер, без знака +, т.е. в формате <i>375291111111</i>.
             </p>
-            <p class="pop-up__text">Чтобы получить сгенерированный сайтом номер нажмите кнопку получить ID.
+            <p class="pop-up__text">
+              ВАЖНО! Мы не используем ваш номер для рекламных рассылок. Для того чтобы быть
+              в курсе последних новостей и рекламных акций подписывайтесь на наш <a href="https://instagram.com/just_fit_by?igshid=ZDc4ODBmNjlmNQ=="
+              rel="nofollow" aria-label="Перейти на страницу в инстаграм">
+              Инстаграм</a> или <a aria-label="Перейти в группу Телеграмм" href="https://t.me/just_fit_belarus" rel="nofollow">Телеграм</a>.
             </p>
-            <button type="button" class="pop-up__button" on:click={ () => active = ''}>ПОНЯТНО</button>
+            <button type="button" class="pop-up__button" on:click={ () => {
+                active = '';
+                message = false;
+                popUpShow.set({
+                  "state": false,
+                  "message": false,
+                  "sms": false
+                });
+                }}>ПОНЯТНО</button>
+        {:else}
+        <SmsForm bind:getSms={getSms}/>
         {/if}
 
     </div>
@@ -42,7 +64,7 @@
         width: 100vw;
         height: 100vh;
         background-color: var(--transparent);
-        padding: 120px 32px;
+        padding: 120px 16px;
         display: none;
         justify-content: center;
         align-items: center;
@@ -166,6 +188,33 @@
 
   .pop-up__text-wrapper{
     flex: 2;
+  }
+
+  @media screen and (min-width: 32em){
+    .pop-up{
+      padding: 120px 48px;
+    }
+
+  }
+
+  @media screen and (min-width: 54em){
+    .pop-up{
+      padding: 120px 20vw;
+    }
+
+    .pop-up__inner{
+      max-width: 470px;
+    }
+  }
+
+  @media screen and (min-width: 84em){
+    .pop-up{
+      padding: 120px 30vw;
+    }
+    
+    .pop-up__inner{
+      max-width: 600px;
+    }
   }
 
   @media screen and (max-width: 350px) {
