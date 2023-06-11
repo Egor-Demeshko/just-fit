@@ -1,4 +1,3 @@
-import { readable } from "svelte/store";
 
 let cart = Object.create(null);
 /**cart = {
@@ -21,6 +20,7 @@ updateCartFromStorage();
 
 
 export function addToCart(id){
+    if(!id) return;
     if(!cartId) cartId = generateCartId();
     if(!cart[id]){
         cart[id] = 1;
@@ -35,6 +35,7 @@ export function addToCart(id){
 
 
 export function removeFromCart(id){
+    if(!id) return;
     if(!cart[id]) return;
 
     if(cart[id] == 1){
@@ -177,4 +178,15 @@ function generateCartId(){
 
 function isListEmpty(){
     return Array.from(Object.keys(cart)).length == 0;
+}
+
+
+export function getTotalQuantity(){
+    let quantity;
+    if(!cartId) return 0;
+
+    for(let value of Object.values(cart)){
+        quantity += value;
+    }
+    return quantity;
 }

@@ -1,21 +1,27 @@
 <script>
     import { getImages } from "$lib/goods/images.js";
     import { getPrices } from "$lib/goods/goods.js";
+    import { createEventDispatcher } from "svelte";
     import Prices from "./Prices.svelte";
     import Tips from "./Tips.svelte";
 
     export let id = "bikini1";
-    export let cardWidth = 0;
+    export let card;
+    let cardWidth = 0;
 
     /*@type Array*/
     const names = getImages(id);
     const {previous, current} = getPrices(id);
 
+    const dispatch = createEventDispatcher();
 
+    /** переменная сам компонент*/
     let images;
+    /** влияет на TIPS, определяем какой tip должен быть активным*/
     let imagePosition = 0;
 
     function arrowHandler(event){
+        cardWidth = card.offsetWidth;
         var length = names.length - 1;
         var target = event.target;
 
@@ -35,16 +41,36 @@
                 imagePosition = 0;
             } else if(imagePosition >= 0) {
                 imagePosition += 1;
-                images.style.transform = `translateX(${ cardWidth * imagePosition}px)`;
+                images.style.transform = `translateX(-${ cardWidth * imagePosition}px)`;
             }
         }
     }
 
 
+    function galleryImgClick(){
+        let imageToShow = images.querySelector(`img[alt="${event.detail}"]`);
+        let offsetLeft = imageToShow.offsetLeft;
+        let imagesWidth = images.offsetWidth;
+
+      if(offsetLeft === 0){
+        imagePosition = 0;
+        images.style.transform = `translateX(0)`;
+        return;
+      }
+
+      imagePosition = Number((offsetLeft / imagesWidth).toFixed(0));
+      images.style.transform = `translateX(-${images.offsetWidth * imagePosition}px)`;
+    }
+
+
 </script>
 
+<svelte:document on:gallery_imgclick={galleryImgClick}></svelte:document>
+
 <div class="carousel radius10" >
-    <div class="images" bind:this={images}>
+    <div class="images" bind:this={images} on:click={() => {
+        dispatch('gotogoodspage');
+    }}>
         {#each names as name}
             <img src="/goods/{id}/{name}_small.webp" alt={name}
                 loading="lazy" width='1000' height='1190' class="image border10"/>

@@ -1,10 +1,34 @@
+<script>
+    import { subscribe, getTotalQuantity } from "$lib/scripts/cart.js";
+    import { onMount } from "svelte";
+
+    let total = 0;
+    let active = '';
+
+    $: if(total > 0) active = "active";
+
+    onMount( () => {
+        updateQuantity();
+    });
+    
+
+    /** из контроллера cart забирает общее количество
+     * этофанкция передает как коллбек в subscribe
+    */
+    function updateQuantity(){
+        total = getTotalQuantity();
+    }
+
+    subscribe(updateQuantity);
+</script>
+
 <a href="/cart" role="button" aria-label="перейти на страницу корзины">
     <svg aria-hidden="true">
         <use href={"/src/lib/icons/navigation.svg#cart_icon"}></use>
     </svg>
 
-    <div class="quantity_wrapper">
-        <span>1</span>
+    <div class="quantity_wrapper {active}">
+        <span>{total}</span>
     </div>
 </a>
 
@@ -37,7 +61,6 @@
         color: var(--icons-white);
     }
 
-    .active,
     svg:active{
         color: var(--icons-main-red);
     }
@@ -51,8 +74,7 @@
         width: 39px;
         height: 39px;
         border-radius: 50%;
-        /*display: none; TODO*/
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         background-color: var(--goods-accent-orange);
@@ -64,6 +86,10 @@
         left: 50%;
         transform: translate(25%, -35%);
         box-shadow: var(--main-shadow);
+    }
+
+    .quantity_wrapper.active{
+        display: flex;
     }
 
     span{

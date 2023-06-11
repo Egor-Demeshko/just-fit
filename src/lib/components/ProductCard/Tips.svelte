@@ -17,12 +17,15 @@
     $: changeActive(imagePosition);
 
     function changeActive(imagePosition){
+        console.log(imagePosition);
+        console.log("collection: ", collection);
         if(!collection) return;
 
         let elementToBeActive = collection.item(imagePosition);
-
+        activeElement = tips.querySelector('.active');
+        
         activeElement.classList.toggle("active");
-        elementToBeActive.toggle("active");
+        elementToBeActive.classList.toggle("active");
     }
 
 </script>
@@ -32,9 +35,10 @@
         {#if i == 0}
             <div class="element {active}">
             </div>
+        {:else}
+            <div class="element">
+            </div>
         {/if}
-        <div class="element">
-        </div>
     {/each}    
 
 </div>

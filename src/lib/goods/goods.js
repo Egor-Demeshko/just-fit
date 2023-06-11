@@ -11,7 +11,7 @@ const goods = {
           "previous": "35",
           "current": "25"
         },
-        "category": {"special": true},
+        "category": {"special": "special"},
         "advantages": {
                       "ids": ["soft", "fit", "light"],
                       "soft": "Мягкая ткань",
@@ -34,7 +34,7 @@ const goods = {
           "previous": "30",
           "current": "25"
         },
-        "category": {"special": true},
+        "category": {"special": "special"},
         "advantages": {
                        "ids": ["soft", "fit", "light"],
                        "soft": "Мягкая ткань",
@@ -58,7 +58,7 @@ const goods = {
     let arr = [];
 
     for(let key of Object.keys(goods)){
-      arr.push([key, goods[key]["name"]]);
+      arr.push([key, goods[key]["name"], goods[key]["category"]]);
     }
 
     return arr;
@@ -73,4 +73,9 @@ const goods = {
   export function getPrice(id){
     return +goods[id]["prices"]["current"];
   };
+
+
+  export function getAll(id){
+    return goods[id];
+  }
   

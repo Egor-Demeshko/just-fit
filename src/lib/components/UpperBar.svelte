@@ -41,9 +41,11 @@
             </svg>
         </div>
         <div class="delivery" aria-label="Перейти на описание условий доставки">
+          <a href="/delivery">
             <svg class="icon">
                 <use href="/src/lib/icons/navigation.svg#delivery"></use>
             </svg>
+          </a>  
         </div>
     </div>
 

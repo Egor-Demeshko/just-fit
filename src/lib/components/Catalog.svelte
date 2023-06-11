@@ -8,8 +8,8 @@
 </script>
 
 <main>
- {#each idsAndNames as [id, name]}
-    <Card {id} {name}/>
+ {#each idsAndNames as [id, name, category]}
+    <Card {id} {name} {category}/>
  {/each} 
 </main>
 

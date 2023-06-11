@@ -13,8 +13,8 @@
         justify-content: center;
         align-items: center;
         background-color: var(--icons-main-red);
-        height: 70%;
-        padding: 0.5rem;
+        max-block-size: 60%;
+        padding: 1.5rem 0.5rem;
         position: absolute;
         top: 14px;
         left: 0;

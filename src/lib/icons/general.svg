@@ -25,7 +25,7 @@
             <path d="M22.856 22.144L17.048 7.36L11.192 22.144H22.856ZM33.992 36.256H28.424L24.776 27.088H9.224L5.528 36.256H0.00800008L14.6 0.447997H19.832L33.992 36.256ZM51.3234 36.256H46.1394V7.12L41.6274 10.912L38.6034 7.6L47.0034 0.447997H51.3234V36.256Z" fill="currentColor"/>
         </symbol>
 
-        <symbol id="minus">
+        <symbol id="minus" viewBox="0 0 39 39">
             <path d="M1.99998 19.5H37" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
 
@@ -52,6 +52,14 @@
             <path d="M25 11.25H13.75C12.3693 11.25 11.25 12.3693 11.25 13.75V25C11.25 26.3807 12.3693 27.5 13.75 27.5H25C26.3807 27.5 27.5 26.3807 27.5 25V13.75C27.5 12.3693 26.3807 11.25 25 11.25Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="transparent"/>
             <path d="M6.25 18.75H5C4.33696 18.75 3.70107 18.4866 3.23223 18.0178C2.76339 17.5489 2.5 16.913 2.5 16.25V5C2.5 4.33696 2.76339 3.70107 3.23223 3.23223C3.70107 2.76339 4.33696 2.5 5 2.5H16.25C16.913 2.5 17.5489 2.76339 18.0178 3.23223C18.4866 3.70107 18.75 4.33696 18.75 5V6.25" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"
             fill="transparent"/>
+        </symbol>
+
+        <symbol id="catalog_small" viewBox="0 0 36 36">
+            <path d="M19.125 27H23.625V31.5H19.125V27Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+            <path d="M27 27H31.5V31.5H27V27Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+            <path d="M19.125 19.125H23.625V23.625H19.125V19.125Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+            <path d="M27 19.125H31.5V23.625H27V19.125Z" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+            <path d="M31.5 12.375H24.75V7.875C24.75 5.9625 23.2875 4.5 21.375 4.5H14.625C12.7125 4.5 11.25 5.9625 11.25 7.875V12.375H4.5C3.825 12.375 3.375 12.825 3.375 13.5V13.725L5.5125 27.3375C5.625 28.4625 6.6375 29.25 7.7625 29.25H16.875V27H7.7625L5.85 14.625H31.5V12.375ZM13.5 7.875C13.5 7.2 13.95 6.75 14.625 6.75H21.375C22.05 6.75 22.5 7.2 22.5 7.875V12.375H13.5V7.875Z" fill="currentColor"/>
         </symbol>
     </defs>
 </svg>

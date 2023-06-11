@@ -9,7 +9,7 @@
       "question_mark": "Узнать больше на странице информации"
     };
     let hrefs = {
-      "telegram": "https://t.me/egor_demeshko",
+      "telegram": "https://t.me/just_fit_belarus",
       "viber": "viber:chat?number=+375292752562",
       "mail": "mailto: jf-minsk@yandex.by",
       "a1": "tel: +375296107173",
