@@ -1,19 +1,23 @@
 <script>
     import { addToCart, removeFromCart } from "$lib/scripts/cart.js";
     import { setErrorMessage } from "$lib/scripts/stores.js";
-    /** есть скрипт cart, через него идет обработка заказов.
-     * импортировать его методы и соотвествующие кнопкам.
-    */
+    import { menuOpen } from "$lib/scripts/stores.js";
+    import { fly } from "svelte/transition";
+    
 
-    let inactive = "inactive";
+    let hidebar = "";
     export let id;
     export let name;
 
 
-    function closeMenu(){
-        /*TODO похоже надо */
-        /**сделать изменение состояния*/
+    $: if($menuOpen){
+        console.log("hiding");
+        hidebar = "hidebar";
+    } else {
+        hidebar = "";
     }
+
+
 
     function removeOne(){
         removeFromCart(id);
@@ -34,9 +38,11 @@
     }
 </script>    
 
-
-<div class="before_grey" aria-live="polite">
-    <button aria-label="Убрать данный товар из корзины" title="Перейти на главную страницу"
+{#if !$menuOpen}
+<div class="before_grey" class:hidebar aria-live="polite"
+    in:fly={{y: 100}}
+    out:fly={{y: 100}}>
+    <button aria-label="Убрать данный товар из корзины" title="Убрать данный товар из корзины"
         class="left" on:click={removeOne}>
         <svg aria-disabled = "true">
             <use href="/src/lib/icons/general.svg#minus"></use>
@@ -55,12 +61,13 @@
             <use href="/src/lib/icons/general.svg#plus"></use>
         </svg>
     </button>
-    <button class="ok" class:inactive on:click={closeMenu} aria-label="Закрыть окно меню">
+    <!--<button class="ok" class:inactive on:click={closeMenu} aria-label="Закрыть окно меню">
         <svg aria-disabled>
             <use href="/src/lib/icons/navigation.svg#ok"></use>
         </svg>
-    </button>
+    </button>-->
 </div>
+{/if}
 
 <style>
     button{
@@ -75,13 +82,19 @@
 
     div{
         position: fixed;
-        bottom: 0;
+        bottom: 0rem;
         width: 100%;
         height: var(--bar-height);
         z-index: 10;
         background-color: var(--background-grey);
         display: flex;
         color: var(--icons-white);
+        border-radius: 10px;
+        box-shadow: var(--main-shadow);
+    }
+
+    .hidebar{
+        display: none;
     }
 
     div *{
@@ -181,6 +194,24 @@
 
     .inactive{
         display: none;
+    }
+
+
+    @media (min-width: 50em){
+        div{
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            bottom: 2rem;
+        }
+
+        .left{
+            border-radius: 10px 0 0 10px;
+        }
+
+        .right{
+            border-radius: 0 10px 10px 0;
+        }
     }
 
 </style>

@@ -4,6 +4,7 @@
     import Pros from "$lib/components/Pros.svelte";
     import GoodBottomBar from "$lib/components/GoodBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
+    import GoodsContact from "../../../lib/components/GoodsContact.svelte";
 
     export let data;
 
@@ -34,21 +35,13 @@
     <p class="goods__about">
       {description}
     </p>
-
-    <a class="goods__return" href="/" aria-label="перейти на главную сраницу">
-      <div class="goods__return-icon">
-        <svg>
-          <use href="/src/lib/icons/general.svg#catalog_small">
-        </svg>
-      </div>
-      <span>Перейти в каталог</span>
-    </a>
     
 </div>
 
 <ErrorMessage/>
 
 <GoodBottomBar {id} {name}/>
+<GoodsContact/>
 
 <style>
 .goods{
@@ -58,7 +51,7 @@
     display: grid;
     grid-template: "gallery photo info" 37.19em
                    "desc desc desc" 1fr
-                   ". return ." 5rem / 6.25em 31.2em auto/*19.5em*/;
+                   ". . cart" 5rem / 6.25em 31.2em auto/*19.5em*/;
     gap: 2rem;
     margin: 0 auto;
     width: 70%;
@@ -111,40 +104,7 @@
     padding: 0.875rem 1rem 2.25rem;
     max-height: 12em;
   }
-
-  .goods__return{
-    grid-area: return;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    color: var(--icons-white);
-    background-color: var(--icons-main-red);
-    text-decoration: none;
-    font-size: 1.5em;
-    padding: 0.5rem;
-    border-radius: 5px;
-    transition: background 600ms ease;
-  }
-
-  .goods__return:hover{
-    background-color: var(--goods-light-orange);
-  }
-
-  .goods__return-icon{
-    block-size: 3rem;
-    inline-size: 3rem;
-  }
-
-  .goods__return svg{
-    width: 100%;
-    height: 100%;
-  }
-
-  .goods__return span{
-    font-weight: bold;
-  }
-
+  
 
   @media (max-width: 85em){
     .goods{

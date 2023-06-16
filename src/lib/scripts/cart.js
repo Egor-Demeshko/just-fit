@@ -182,7 +182,7 @@ function isListEmpty(){
 
 
 export function getTotalQuantity(){
-    let quantity;
+    let quantity = 0;
     if(!cartId) return 0;
 
     for(let value of Object.values(cart)){

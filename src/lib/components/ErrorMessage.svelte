@@ -3,11 +3,15 @@
   let show = '';
   $: show = $setErrorMessage.show;
 
-  console.log("значени show на компоненте  ", show);
-
     $: if(show == "show"){
-      console.log("значени show поменялось");
-      setTimeout(() => show = '', 7500);
+      debugger;
+      setTimeout(() => {
+        show = '',
+        setErrorMessage.setErrorMessage({"show": "",
+            "title": "Сообщение",
+            "message": "Сообщение"
+        });
+      }, 7500);
     }
 
 

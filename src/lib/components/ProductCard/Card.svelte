@@ -59,7 +59,7 @@
 
 <div class="card_wrapper" bind:this={card} class:inactive>
     <div class="card">
-        <Carousel {id} {card} on:gotogoodspage={pendingGoodsPage}/>
+        <Carousel {id} {card} {name} on:gotogoodspage={pendingGoodsPage}/>
 
         {#if !goodPage}
             <AddToCart {id} {name}/>

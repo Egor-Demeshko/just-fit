@@ -46,7 +46,7 @@
             <use class="message" href="/src/lib/icons/navigation.svg#message"></use>
         </svg>
     </a>
-    <button class="right" disabled={disabled}>
+    <button class="right" disabled={disabled} aria-label="Сделать заказ">
         <svg aria-disabled="true">
             <use href="/src/lib/icons/navigation.svg#ok"></use>
         </svg>

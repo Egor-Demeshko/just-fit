@@ -4,14 +4,13 @@
     import { getFormFields } from "$lib/scripts/formFields.js";
     import { enhance } from "$app/forms";
     import { submitPending } from "$lib/scripts/stores.js";
+    import { setErrorMessage  } from "../../scripts/stores";
     import CartItem from "$lib/components/CartElements/CartItem.svelte";
     import Input from "$lib/components/CartElements/Input.svelte";
     import InputId from "$lib/components/CartElements/InputId.svelte";
     import CartBottomBar from "$lib/components/CartElements/CartBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
-    import { setErrorMessage  } from "../../scripts/stores";
 
-    export let form;
     let cartTotal = 0;
     let formElement;
     let cartId;

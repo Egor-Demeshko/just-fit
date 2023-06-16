@@ -7,6 +7,8 @@
 
     export let id = "bikini1";
     export let card;
+    export let name = '';
+    let label = "Галерея изображений изделия " + name;
     let cardWidth = 0;
 
     /*@type Array*/
@@ -68,7 +70,8 @@
 <svelte:document on:gallery_imgclick={galleryImgClick}></svelte:document>
 
 <div class="carousel radius10" >
-    <div class="images" bind:this={images} on:click={() => {
+    <div class="images" bind:this={images} aria-label={label}
+    on:click={() => {
         dispatch('gotogoodspage');
     }}>
         {#each names as name}
@@ -81,14 +84,16 @@
 
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="arrows" on:click={arrowHandler}>
-        <div class="arrow_wrapper" data-arrow="left">
-            <svg class="arrow">
+        <div class="arrow_wrapper" data-arrow="left" aria-label="Листать фотографии влево"
+        role="button">
+            <svg class="arrow" aria-disabled="true">
                 <use href="/src/lib/icons/navigation.svg#left_arrow"></use>
             </svg>
         </div>
 
-        <div class="arrow_wrapper" data-arrow="right">
-            <svg class="arrow">
+        <div class="arrow_wrapper" data-arrow="right" aria-label="Листать фотографии вправо"
+        role="button">
+            <svg class="arrow" aria-disabled="true">
                 <use href="/src/lib/icons/navigation.svg#right_arrow"></use>
             </svg>
         </div>
