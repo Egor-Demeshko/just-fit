@@ -5,20 +5,52 @@
     import GoodBottomBar from "$lib/components/GoodBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
     import GoodsContact from "../../../lib/components/GoodsContact.svelte";
+    import { onMount } from "svelte";
 
     export let data;
 
-    $: console.log(data);
+    $: console.log("data on page", data.data[0].attributes);
 
-    let {id , images, name, advantages, description} = data;    
+    let {fitid:  id, images, name, advantages, description} = data.data[0].attributes;  
+    
+    gainURLS();
+    /**function to get images URLS*/
+    function gainURLS(){
+      console.log(/**function to get images URLS*/);
+      images = images.data;
+      
+      images.forEach((element, i, arr) => {
+        if(!element.attributes) return;
+        let name = element.attributes.formats.medium.name.replace(/medium_/, "")
+                                                          .replace(/.jpg/, "");
+
+        console.log("name", name);
+                                                  
+        arr[i] = {
+          "url": element.attributes.formats.medium.url,
+          "name": name
+        }
+      });
+      
+
+    }
+
+
+
+    
 
 </script>
 
-<div class="goods">
+<svelte:head>
+
+</svelte:head>
+
+<div class="goods" itemscope itemtype="https://schema.org/Product">
+    <meta itemprop="{name}"/>
     <Gallery {id} {images}/>
 
     <div class="goods__images">
-        <ProductCard goodPage={true} {id} {name}/>
+        <ProductCard goodPage={true} {id} {name} {images}/>
     </div>
 
     <div class="goods__info">
@@ -33,6 +65,7 @@
     </div>
 
     <p class="goods__about">
+      <meta itemprop="description" content="{description}"/>
       {description}
     </p>
     

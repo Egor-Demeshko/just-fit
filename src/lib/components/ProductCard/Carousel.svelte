@@ -1,67 +1,68 @@
 <script>
-    import { getImages } from "$lib/goods/images.js";
     import { getPrices } from "$lib/goods/goods.js";
     import { createEventDispatcher } from "svelte";
+    import { constants } from "$lib/constants";
     import Prices from "./Prices.svelte";
     import Tips from "./Tips.svelte";
 
     export let id = "bikini1";
     export let card;
     export let name = '';
+    export let images;
     let label = "Галерея изображений изделия " + name;
     let cardWidth = 0;
 
     /*@type Array*/
-    const names = getImages(id);
-    const {previous, current} = getPrices(id);
+
+    const { previous, current } = getPrices(id);
 
     const dispatch = createEventDispatcher();
 
     /** переменная сам компонент*/
-    let images;
+    let imagesElement;
     /** влияет на TIPS, определяем какой tip должен быть активным*/
     let imagePosition = 0;
 
     function arrowHandler(event){
         cardWidth = card.offsetWidth;
-        var length = names.length - 1;
+        var length = images.length - 1;
         var target = event.target;
 
         if(target.closest('div').dataset.arrow === "left"){
             if(imagePosition === 0) {
-                images.style.transform = `translateX(-${ cardWidth * length }px)`;
+                imagesElement.style.transform = `translateX(-${ cardWidth * length }px)`;
                 imagePosition = length;
             } else if (imagePosition <= length){
                 imagePosition -= 1;
-                images.style.transform = `translateX(-${ cardWidth * imagePosition }px)`;
+                imagesElement.style.transform = `translateX(-${ cardWidth * imagePosition }px)`;
             }
         }
 
         if(target.closest('div').dataset.arrow === "right"){
             if(imagePosition === length){
-                images.style.transform = `translateX(0)`;
+                imagesElement.style.transform = `translateX(0)`;
                 imagePosition = 0;
             } else if(imagePosition >= 0) {
                 imagePosition += 1;
-                images.style.transform = `translateX(-${ cardWidth * imagePosition}px)`;
+                imagesElement.style.transform = `translateX(-${ cardWidth * imagePosition}px)`;
             }
         }
     }
 
 
     function galleryImgClick(){
-        let imageToShow = images.querySelector(`img[alt="${event.detail}"]`);
+        let imageToShow = imagesElement.querySelector(`img[alt="${event.detail}"]`);
         let offsetLeft = imageToShow.offsetLeft;
-        let imagesWidth = images.offsetWidth;
+        let imagesWidth = imagesElement.offsetWidth;
 
       if(offsetLeft === 0){
         imagePosition = 0;
-        images.style.transform = `translateX(0)`;
+        imagesElement.style.transform = `translateX(0)`;
         return;
       }
 
       imagePosition = Number((offsetLeft / imagesWidth).toFixed(0));
-      images.style.transform = `translateX(-${images.offsetWidth * imagePosition}px)`;
+      imagesElement.style.transform = `translateX(-${imagesElement.offsetWidth * imagePosition}px)`;
     }
 
 
@@ -70,12 +71,13 @@
 <svelte:document on:gallery_imgclick={galleryImgClick}></svelte:document>
 
 <div class="carousel radius10" >
-    <div class="images" bind:this={images} aria-label={label}
+    <div class="imagesElement" bind:this={imagesElement} aria-label={label}
     on:click={() => {
         dispatch('gotogoodspage');
     }}>
-        {#each names as name}
-            <img src="/goods/{id}/{name}_small.webp" alt={name}
+        {#each images as image}
+            <link itemprop="image" href={constants.ORIGIN}{image.url}/>
+            <img src="{constants.ORIGIN}{image.url}" alt={image.name}
                 loading="lazy" width='1000' height='1190' class="image border10"/>
         {/each}
     </div>
@@ -99,7 +101,7 @@
         </div>
     </div>
 
-    <Tips {imagePosition} {names}/>
+    <Tips {imagePosition} {images}/>
 </div>
 
 <style>
@@ -114,7 +116,7 @@
         border-radius: var(--card-border-radius) var(--card-border-radius) 0 0;
     }
 
-    .images{
+    .imagesElement{
         display: flex;
         max-width: 1000px;
         transition: transform 600ms ease;

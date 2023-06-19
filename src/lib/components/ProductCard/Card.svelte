@@ -11,6 +11,7 @@
     export let name = "Трусики от Just Fit";
     /**определяет находимся ли мы на страницу описание единицы товара*/
     export let goodPage = false;
+    export let images;
 
     let card;
     let cardWidth;
@@ -57,9 +58,12 @@
 </script>
 
 
+
+
+
 <div class="card_wrapper" bind:this={card} class:inactive>
     <div class="card">
-        <Carousel {id} {card} {name} on:gotogoodspage={pendingGoodsPage}/>
+        <Carousel {id} {card} {name} {images} on:gotogoodspage={pendingGoodsPage}/>
 
         {#if !goodPage}
             <AddToCart {id} {name}/>

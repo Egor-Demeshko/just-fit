@@ -3,14 +3,18 @@
     export let current = '';
 </script>
 
-<div class="prices">
+<div class="prices" itemprop="offers" itemscope 
+itemtype="https://schema.org/Offer">
+    <meta itemprop="price" content="{current}"/>
+    <meta itemprop="priceCurrency" content="BYN"/>
+    <link itemprop="availability" href="https://schema.org/InStock" />
     {#if previous}
     <div class="previous">
         <span class="text small_font">{previous}р.</span>
     </div>
     {/if}
     <div class="current">
-        <span class="text normal_font">{current}р.</span>
+        <span class="text normal_font">{current}р.</span>        
     </div>
 </div>
 

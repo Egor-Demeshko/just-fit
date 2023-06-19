@@ -1,4 +1,6 @@
 <script>
+    import { constants } from "$lib/constants"
+    
     export let id;
     export let images;
     const NOAFTER = "gallery_no_after";
@@ -38,9 +40,9 @@
 <div class="gallery" on:scroll={handelScroll} bind:this={elem}>
 
     <div class="gallery__wrapper">
-        {#each images as imageName}
+        {#each images as imgObj}
             <div class="gallery__item">
-                <img src="/goods/{id}/{imageName}_small.webp" alt="{imageName}"
+                <img src="{constants.ORIGIN}{imgObj.url}" alt="{imgObj.name}"
                 height="1190" width="1000" loading="lazy"
                 on:click={imgClick}>
             </div>
