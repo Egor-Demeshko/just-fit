@@ -7,7 +7,7 @@
 
 export function load( {params, locals} ){
     let goodData;
-    console.log("start of loading function: ", locals);
+    console.log("start of loading function: ", locals.data[0].attributes);
 
     if(locals){
        /* goodData = getAll(params.good);*/

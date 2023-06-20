@@ -1,16 +1,13 @@
 <script>
     import { constants } from "$lib/constants"
+    import { onMount } from "svelte";
     
     export let id;
     export let images;
-    const NOAFTER = "gallery_no_after";
+    console.log("-------------------gallery", images);
+    let noafter = "gallery__no_after";
     let elem;
-
-    //сформировать обьект 
-    /**
-     * images формирует шаблок фоток,
-     * какую фотку показать определеяем через alt.
-    */
+    let imagesArr = images.data;
 
 
    function handelScroll(){
@@ -18,12 +15,24 @@
     let clientHeight = elem.clientHeight;
     let difference = scrollHeight - clientHeight;
 
+    console.log("scrollHeight: ", scrollHeight);
+    console.log("clientHeight: ", clientHeight);
+    console.log("elem.scrollTop ", elem.scrollTop);
+
+    if(difference === 0){
+      noafter = "gallery__no_after";
+      return;
+    }
+
         if(difference < (elem.scrollTop*2)){
-            elem.classList.add(NOAFTER);
+            noafter = "gallery__no_after";
         } else {
-            elem.classList.remove(NOAFTER);
+            noafter = "";
         }
    }
+
+   onMount( () => handelScroll() );
+   
 
 
     function imgClick(event){
@@ -37,10 +46,10 @@
 
 </script>
 
-<div class="gallery" on:scroll={handelScroll} bind:this={elem}>
+<div class="gallery {noafter}" on:scroll={handelScroll} bind:this={elem}>
 
     <div class="gallery__wrapper">
-        {#each images as imgObj}
+        {#each imagesArr as imgObj}
             <div class="gallery__item">
                 <img src="{constants.ORIGIN}{imgObj.url}" alt="{imgObj.name}"
                 height="1190" width="1000" loading="lazy"

@@ -4,10 +4,10 @@
   $: show = $setErrorMessage.show;
 
     $: if(show == "show"){
-      debugger;
+
       setTimeout(() => {
         show = '',
-        setErrorMessage.setErrorMessage({"show": "",
+        setErrorMessage.set({"show": "",
             "title": "Сообщение",
             "message": "Сообщение"
         });

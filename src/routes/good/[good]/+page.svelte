@@ -5,43 +5,32 @@
     import GoodBottomBar from "$lib/components/GoodBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
     import GoodsContact from "../../../lib/components/GoodsContact.svelte";
-    import { onMount } from "svelte";
+    import { constants } from "$lib/constants";
 
+    /**Данные с сервера, приходящие при загрузке страницке*/
     export let data;
+    let OGimageUrl;
 
     $: console.log("data on page", data.data[0].attributes);
 
-    let {fitid:  id, images, name, advantages, description} = data.data[0].attributes;  
-    
-    gainURLS();
-    /**function to get images URLS*/
-    function gainURLS(){
-      console.log(/**function to get images URLS*/);
-      images = images.data;
-      
-      images.forEach((element, i, arr) => {
-        if(!element.attributes) return;
-        let name = element.attributes.formats.medium.name.replace(/medium_/, "")
-                                                          .replace(/.jpg/, "");
-
-        console.log("name", name);
-                                                  
-        arr[i] = {
-          "url": element.attributes.formats.medium.url,
-          "name": name
-        }
-      });
-      
-
+    let {fitid:  id, images, name, advantages, description, SEO, prices} = data.data[0].attributes;
+    console.log("images **************8 ", images); 
+    console.log("**** images OGIMAGEURL ****", images.data[0].attributes); 
+    if(images.data[0].attributes){
+      OGimageUrl = images.data[0].attributes.formats.small.url;
     }
-
-
-
-    
-
+  
 </script>
 
 <svelte:head>
+
+  <title>{SEO.seo_title}</title>
+  <meta name="description" content={SEO.seo_description}/>
+  <meta property="og:url" content="https://justfit.by">
+  <meta property="og:title" content="Мужское нижнее белье {name} от JF">
+  <meta property="og:description" content="{SEO.seo_description}">
+  <meta property="og:image" content= {constants.ORIGIN}{OGimageUrl}>
+  <meta property="og:locale" content="ru_RU">
 
 </svelte:head>
 
@@ -50,7 +39,7 @@
     <Gallery {id} {images}/>
 
     <div class="goods__images">
-        <ProductCard goodPage={true} {id} {name} {images}/>
+        <ProductCard goodPage={true} {id} {name} {images} {prices}/>
     </div>
 
     <div class="goods__info">

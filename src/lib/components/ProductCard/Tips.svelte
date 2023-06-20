@@ -1,7 +1,7 @@
 <script>
     import { onMount } from "svelte";
 
-    export let images = [];
+    export let imagesLocal = [];
     export let imagePosition = 0;
 
     const active = 'active';
@@ -31,7 +31,7 @@
 </script>
 
 <div class="tips" bind:this={tips}>
-    {#each images as name, i (name)}
+    {#each imagesLocal as name, i (name)}
         {#if i == 0}
             <div class="element {active}">
             </div>

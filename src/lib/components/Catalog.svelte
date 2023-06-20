@@ -1,15 +1,14 @@
 <script>
-    import { getIDAndNames } from "$lib/goods/goods.js";
     import Card  from "$lib/components/ProductCard/Card.svelte";
 
-    const idsAndNames = getIDAndNames();
+    export let goods;
 
 
 </script>
 
 <main>
- {#each idsAndNames as [id, name, category]}
-    <Card {id} {name} {category}/>
+ {#each goods as {fitid: id, name, category, images, prices}}
+    <Card {id} {name} {category} {images} {prices}/>
  {/each} 
 </main>
 

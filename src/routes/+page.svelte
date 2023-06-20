@@ -4,6 +4,16 @@
     import Filter from '$lib/components/Filter.svelte';
     import ContactBar from '$lib/components/ContactBar.svelte';
     import Catalog from '$lib/components/Catalog.svelte';
+    import { setContext } from 'svelte';
+
+    /** @type {Array}
+     * @description массив товаро из базы.
+    */
+    export let data;
+
+    let goods = data.data.map( (value) => value.attributes); 
+
+
  </script> 
  <svelte:head>
     <script type="application/ld+json">
@@ -43,7 +53,7 @@
 
 <Filter/>
 
-<Catalog/>
+<Catalog {goods}/>
 
 <BottomBar/>
 

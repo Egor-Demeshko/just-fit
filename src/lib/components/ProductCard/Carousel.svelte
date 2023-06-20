@@ -1,20 +1,17 @@
 <script>
-    import { getPrices } from "$lib/goods/goods.js";
     import { createEventDispatcher } from "svelte";
     import { constants } from "$lib/constants";
+    import { page } from '$app/stores';
     import Prices from "./Prices.svelte";
     import Tips from "./Tips.svelte";
 
     export let id = "bikini1";
     export let card;
     export let name = '';
-    export let images;
+    export let imagesLocal;
     let label = "Галерея изображений изделия " + name;
     let cardWidth = 0;
-
-    /*@type Array*/
-
-    const { previous, current } = getPrices(id);
+    console.log("!!!!!!!CAROUSEL!!!!!!!!", imagesLocal);
 
     const dispatch = createEventDispatcher();
 
@@ -22,10 +19,12 @@
     let imagesElement;
     /** влияет на TIPS, определяем какой tip должен быть активным*/
     let imagePosition = 0;
+    /** в зависимости от того где компонент находится, определяет отображение границ*/
+    let borderRadiusClass = '';
 
     function arrowHandler(event){
         cardWidth = card.offsetWidth;
-        var length = images.length - 1;
+        var length = imagesLocal.length - 1;
         var target = event.target;
 
         if(target.closest('div').dataset.arrow === "left"){
@@ -50,7 +49,7 @@
     }
 
 
-    function galleryImgClick(){
+    function galleryImgClick(event){
         let imageToShow = imagesElement.querySelector(`img[alt="${event.detail}"]`);
         let offsetLeft = imageToShow.offsetLeft;
         let imagesWidth = imagesElement.offsetWidth;
@@ -65,6 +64,14 @@
       imagesElement.style.transform = `translateX(-${imagesElement.offsetWidth * imagePosition}px)`;
     }
 
+        
+    if($page.url.pathname.startsWith("/good")){
+        borderRadiusClass = "border10__andBottom";
+    } else {
+        borderRadiusClass = "border10";
+    }
+    
+
 
 </script>
 
@@ -75,14 +82,14 @@
     on:click={() => {
         dispatch('gotogoodspage');
     }}>
-        {#each images as image}
+        {#each imagesLocal as image}
             <link itemprop="image" href={constants.ORIGIN}{image.url}/>
             <img src="{constants.ORIGIN}{image.url}" alt={image.name}
-                loading="lazy" width='1000' height='1190' class="image border10"/>
+                loading="lazy" width='1000' height='1190' class="image {borderRadiusClass}"/>
         {/each}
     </div>
 
-    <Prices {current} {previous}/>
+    <Prices/>
 
     <!-- svelte-ignore a11y-click-events-have-key-events -->
     <div class="arrows" on:click={arrowHandler}>
@@ -101,7 +108,7 @@
         </div>
     </div>
 
-    <Tips {imagePosition} {images}/>
+    <Tips {imagePosition} {imagesLocal}/>
 </div>
 
 <style>
@@ -120,6 +127,7 @@
         display: flex;
         max-width: 1000px;
         transition: transform 600ms ease;
+        background-color: var(--background-grey);
     }
 
     .image{
@@ -132,6 +140,10 @@
 
     .border10{
         border-radius: 10px 10px 0 0;
+    }
+
+    .border10__andBottom{
+        border-radius: 10px;
     }
 
     .arrows{

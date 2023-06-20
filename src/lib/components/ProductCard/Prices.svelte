@@ -1,13 +1,20 @@
 <script>
-    export let previous = '';
-    export let current = '';
+    import { getContext } from "svelte";
+
+
+    /**
+     * констекст задается при получении данных на +page.svelte
+     */
+     const { previous, current } = getContext("prices");
 </script>
 
 <div class="prices" itemprop="offers" itemscope 
 itemtype="https://schema.org/Offer">
+
     <meta itemprop="price" content="{current}"/>
     <meta itemprop="priceCurrency" content="BYN"/>
     <link itemprop="availability" href="https://schema.org/InStock" />
+    
     {#if previous}
     <div class="previous">
         <span class="text small_font">{previous}р.</span>
