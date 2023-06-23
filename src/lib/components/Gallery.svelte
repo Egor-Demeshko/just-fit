@@ -1,5 +1,5 @@
 <script>
-    import { constants } from "$lib/constants"
+    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
     import { onMount } from "svelte";
     
     export let id;
@@ -51,7 +51,8 @@
     <div class="gallery__wrapper">
         {#each imagesArr as imgObj}
             <div class="gallery__item">
-                <img src="{constants.ORIGIN}{imgObj.url}" alt="{imgObj.name}"
+                <img src="{PUBLIC_STRAPI_ORIGIN}{imgObj.attributes.formats.small.url}" 
+                alt="{imgObj.attributes.name}"
                 height="1190" width="1000" loading="lazy"
                 on:click={imgClick}>
             </div>

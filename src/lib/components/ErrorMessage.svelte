@@ -36,6 +36,7 @@
     background-color: var(--goods-light-orange);
     border-radius: 10px;
     border: 3px solid var(--goods-accent-orange);
+    z-index: 10;
 }
 
 .show{

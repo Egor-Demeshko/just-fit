@@ -1,8 +1,9 @@
 <script>
 import { onMount } from "svelte";
-import { popUpShow, circles, okbutton, isMesure, isMeasureSubmit } from "$lib/scripts/stores.js";
+import { popUpShow, circles, okbutton, isMeasureSubmit } from "$lib/scripts/stores.js";
 import { dbController } from "../scripts/firebase";
 import { validateCode } from "../scripts/validateCode";
+import { submitPending } from "../scripts/stores";
 
 
 export let buttonId;
@@ -67,6 +68,7 @@ export function showAndProceed(){
           });
 
           userId = await validateCode(confirmationResult, smsCode.code);
+
           userId = userId.user.uid;
           
           {
@@ -79,7 +81,7 @@ export function showAndProceed(){
           circles.set(false);
           button.disabled = 'true';
           okbutton.set(true);
-          isMesure.set(false);
+          submitPending.set(false);
       })
       .catch( (error)=>{
           console.log(error.message);

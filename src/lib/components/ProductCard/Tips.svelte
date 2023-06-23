@@ -17,8 +17,8 @@
     $: changeActive(imagePosition);
 
     function changeActive(imagePosition){
-        console.log(imagePosition);
-        console.log("collection: ", collection);
+        /*console.log(imagePosition);
+        console.log("collection: ", collection);*/
         if(!collection) return;
 
         let elementToBeActive = collection.item(imagePosition);

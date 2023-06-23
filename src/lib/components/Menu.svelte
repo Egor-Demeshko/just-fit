@@ -1,12 +1,18 @@
 <script>
     import { menuOpen } from "$lib/scripts/stores.js";
+    import { fly } from "svelte/transition";
 
     let opens = '';
     let closes = '';
-
+   /* let nonactive = "";*/
+/*
+    if($menuOpen){
+        nonactive = "nonactive"
+    } else {
+      nonactive = ""
+    }*/
 
     menuOpen.subscribe( (value) => {
-
         if(value){
             opens = "opens";
         } else if (value === 0){
@@ -25,10 +31,20 @@
     function close(){
         menuOpen.set(false);
     }
+
+
+    function handelClick(event){
+      /*debugger;*/
+        if(event.target.tagName === "A"){
+          menuOpen.set(false);
+        }
+    }
 </script>
 
 
-<div class="menu" class:opens class:closes>
+<div class="menu" class:opens class:closes 
+in:fly="{{ x:200}}"
+out:fly="{{ y:200}}">
     <div class="menu__big-logo-outer">
       <svg class="menu__big-logo" alt="Большой логотип магазина PION">
         <use href="/src/lib/icons/logo/logo.svg#logo"></use>
@@ -36,7 +52,7 @@
     </div>
 
 
-    <nav class="menu__navigation">
+    <nav class="menu__navigation" on:click={handelClick}>
       <ul class="menu__options-list">
         <li class="menu__option"><span class="menu__text"><a href="/what-is-it" 
             aria-label="перейти на страницу описания компании JUST FIT">О проекте
@@ -143,7 +159,7 @@ a:visited{
     bottom: 0;
     border: none;
     box-shadow: none;
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     background-color: var(--icons-main-red);
     color: var(--icons-white);
     font-size: 1.5em;
@@ -152,6 +168,11 @@ a:visited{
     border-radius: 10px;
     transition: background-color 600ms ease;
   }
+
+/*
+  .nonactive{
+    display: none;
+  }*/
 
 
 @media(min-width: 32em){

@@ -1,6 +1,6 @@
 <script>
     import { submitPending } from "$lib/scripts/stores.js";
-    import { isMesure, measureSMSvarificationState } from "$lib/scripts/stores.js";
+    import { measureSMSvarificationState } from "$lib/scripts/stores.js";
 
 
     /**@type {boolean}
@@ -12,23 +12,16 @@
     let inactive = 'inactive';
     let active = 'active';
     let disabled;
-    $: disabled = ($isMesure) ? true : false;
+
+    $: disabled = $submitPending;
+    console.log("disabled ", disabled);
 
 
     function closeMenu(){}
 
-    {
-        /** когда форма submits мы сбрасываем стили валидации, так как
-         * они работают через классы.
-        */
-        submitPending.subscribe( (isSubmiting) => {
-            disabled = (isSubmiting) ? true : false;
-        });
-    }
-
-    measureSMSvarificationState.subscribe((isVerified) => {
+    /*measureSMSvarificationState.subscribe((isVerified) => {
         if(isVerified) isMesure = false; 
-    });
+    });*/
 </script>    
 
 
@@ -179,6 +172,14 @@
 
     .inactive{
         display: none;
+    }
+
+
+    @media (max-width: 25em){
+        .center{
+            width: 5.5rem;
+            height: 5.5rem;
+        }
     }
 
 </style>

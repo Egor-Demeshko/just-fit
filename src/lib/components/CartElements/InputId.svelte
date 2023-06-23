@@ -46,24 +46,12 @@
         startValidation();
     }
 
-    {
-        /** когда форма submits мы сбрасываем стили валидации, так как
-         * они работают через классы.
-        */
-        submitPending.subscribe( (isSubmitimg) => {
-            if(isSubmitimg){
-                invalid = false;
-                valid = false;
-            }
-        });
-    }
-
 </script>    
 
 
 <div class="input_wrapper metrics" class:valid class:invalid>
     <label for="idinput" class="signed" aria-disabled>
-        <span>ID размера</span>
+        <span>Ваш контактный номер:</span>
         <span class="label_required">*</span>
     </label>
     <input bind:this={input} id="id" class="required input" type="tel" name="id" 
@@ -74,6 +62,18 @@
     on:invalid={setInvalid}
     on:blur={blurHandler}/>
 </div>
+
+
+<div class="input_wrapper">
+    <label for="idinput" class="signed" aria-disabled>
+        <span>Если Вы заказываете по стандартному размеру, укажите его в поле справа:</span>
+    </label>
+    <input id="standart_size" class="input another_input" type="tel" name="standart_size" 
+    placeholder="Обычный формат размера 44 или 50 ит.д." maxlength="2" 
+    aria-label="Поле для вода стандартного размера" autocomplete="off"/>
+</div>
+
+
 
 <style>
         div{
@@ -122,7 +122,7 @@
 
     label{
         font-family: LexendDeca, sans-serif;
-        font-size: 0.9em;
+        font-size: 1rem;
         font-weight: bold;
         text-align: left;
         flex: 1;

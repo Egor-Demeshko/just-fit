@@ -7,6 +7,17 @@ const subscribers = [];
 const STORAGE_ID = "JF_CART";
 let cartId = '';
 
+/**
+ * обьект для хранения ссылок на загрузку мелких фотографий для отображения в корзине
+ * {
+ *      id: {
+ *              url: "smallImage",
+ *              name: "imagename"
+ *          }
+ * }
+ */
+/*let imagesForCart = Object.create(null);*/
+
 /**в storage отправляем обьект вида {
  * cartId: cartId значение,
  * goods: [] переменная cart
@@ -19,12 +30,20 @@ let storage;
 updateCartFromStorage();
 
 
-export function addToCart(id){
+export function addToCart(id, imageUrl, name){
     if(!id) return;
     if(!cartId) cartId = generateCartId();
+    if(!cart) cart = {};
     if(!cart[id]){
         cart[id] = 1;
+        /*console.log("SMALL IMAGE at cart.js", imageUrl);
+        console.log("imagesForCart: ", imagesForCart);
+        /*imagesForCart[id] = {};
+        imagesForCart[id].url = imageUrl;
+        imagesForCart[id].name = name;*/
+
         update();
+        updateStorage();
         return;
     }
     
@@ -40,12 +59,16 @@ export function removeFromCart(id){
 
     if(cart[id] == 1){
         delete cart[id];
+        /*debugger;
+            delete imagesForCart[id];*/
         update();
+        updateStorage();
         return;
     }
 
     cart[id] -= 1;
     update();
+    updateStorage();
 }
 
 
@@ -54,8 +77,9 @@ export function removeGood(id){
 
     if(isListEmpty()){
         storage.removeItem(STORAGE_ID);
-        cartId = '';
+        cartId = undefined;
         cart = null;
+        /*imagesForCart = null;*/
         return true;
     }
 
@@ -111,15 +135,34 @@ function updateStorage(){
         let objToBeSend = Object.create(null);
         objToBeSend["cartId"] = cartId;
         objToBeSend["goods"] = cart;
+        /*objToBeSend["imagesForCart"] = imagesForCart;*/
 
         storage.setItem(STORAGE_ID, JSON.stringify(objToBeSend));
         console.log("storageUpdated", storage.getItem(STORAGE_ID));
 
         objToBeSend = null;
         return true;
-    } 
+    } else if(isStorageAvailable() && isListEmpty()){
+        storage.removeItem(STORAGE_ID);
+        cart = null;
+    }
 }
 
+/*
+export function getImagesList(){
+    return imagesForCart;
+}
+
+
+export function getImageUrl(id){
+    return imagesForCart[id].url;
+}
+
+
+export function getImageName(id){
+    return imagesForCart[id].name;
+}
+*/
 
 function updateCartFromStorage(){
     var cartFromStorage;
@@ -130,6 +173,7 @@ function updateCartFromStorage(){
 
       if (cartFromStorage && typeof cartFromStorage === "object"){
         cartId = cartFromStorage.cartId;
+        /*imagesForCart = cartFromStorage.imagesForCart;*/
 
 
         {
@@ -184,6 +228,7 @@ function isListEmpty(){
 export function getTotalQuantity(){
     let quantity = 0;
     if(!cartId) return 0;
+    if(!cart) return 0;
 
     for(let value of Object.values(cart)){
         quantity += value;

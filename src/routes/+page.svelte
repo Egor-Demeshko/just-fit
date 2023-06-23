@@ -11,7 +11,9 @@
     */
     export let data;
 
-    let goods = data.data.map( (value) => value.attributes); 
+    let goods = data.locals.data.map( (value) => value.attributes); 
+    let pageMeta = data.pageMeta.data[0].attributes;
+    //console.log("META META META   pageMeta on page!!!", pageMeta);
 
 
  </script> 
@@ -47,6 +49,8 @@
             ]
         }
     </script>
+    <title>{pageMeta.title}</title>
+    <meta name="description" content={pageMeta.description}>
  </svelte:head>   
 
 

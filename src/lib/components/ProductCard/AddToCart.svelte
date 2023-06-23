@@ -3,6 +3,7 @@
 
     export let id = "bikini1";
     export let name = "Трусики от Just Fit";
+    /*export let smallImages;*/
 
 
     function handelClick(event){
@@ -15,6 +16,7 @@
         }
 
         if(add && add.getAttribute("role") === "button"){
+
             addToCart(id);
         }
     }

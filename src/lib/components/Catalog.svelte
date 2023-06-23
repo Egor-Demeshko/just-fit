@@ -1,9 +1,8 @@
 <script>
     import Card  from "$lib/components/ProductCard/Card.svelte";
+    //import { setNames } from "$lib/goods/images";
 
     export let goods;
-
-
 </script>
 
 <main>
@@ -20,7 +19,7 @@ main{
     gap: 24px;
     padding: 120px 12px;
     overflow-y: scroll;
-    align-items: start;
+    align-items: center;
     justify-content: center;
 }
 

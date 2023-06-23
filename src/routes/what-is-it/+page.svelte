@@ -1,12 +1,14 @@
 <script>
     import UpperBar from "$lib/components/UpperBar.svelte";
     import Menu from "$lib/components/Menu.svelte";
+
+    export let data;
+    let pageMeta = data.pageMeta.data[0].attributes;
 </script>
 
 <svelte:head>
-    <title>JF. Страница описания проекта Just Fit.</title>
-    <meta name="description" content="Старница описания проекта Just Fit и интрукция как заказать белье. Just Fit - это бренд мужского нижнего белья, созданный с учетом комфорта и стиля. Наша коллекция включает в себя широкий ассортимент боксеров, трусов слипов и стринг.
-    Оцените каталог нижнего белья, снимите мерки нижнего белья и заказывайте онлайн. Покупайте нижнее мужское белье Just Fit прямо сейчас и наслаждайтесь комфортом и качеством наших изделий! ">
+    <title>{pageMeta.title}</title>
+    <meta name="description" content={pageMeta.description}>
 </svelte:head>
 
 <UpperBar/>
@@ -26,7 +28,7 @@
       <div  class="what__middle">
         <svg id="middle" viewBox="12 0 340 479">
           <path d="M26.06 121.009C34.0507 128.702 44.7113 133 55.8034 133L300 133C327.614 133 350 110.614 350 83V58.5614C350 27.8212 322.523 4.36095 292.163 9.17946L49.0812 47.7592C14.1104 53.3095 0.551564 96.4517 26.06 121.009V121.009Z" fill="currentColor"/>
-          <path d="M13 87H350V469C350 474.523 345.523 479 340 479H63C35.3858 479 13 456.614 13 429V87Z" fill="currentColor"/>          </svg>
+          <path d="M13 87H350V469C350 474.523 345.523 479 340 479H63C35.3858 479 13 456.614 13 429V87Z" fill="currentColor"/></svg>
         <p class="what__text">
           Меня зовут Анастасия. Мне очень нравится носить белье пошитое по индивидуальным меркам.
           Такое белье очень удобное, не режет и не скользит. Мое главное желание сделать такое белье доступным.
@@ -130,6 +132,8 @@
   }
 
 
+
+
   .what *{
     box-sizing: border-box;
   }
@@ -172,7 +176,7 @@
     bottom: 0;
     left: 2rem;
     transform: translateY(50%);
-    z-index: 10;
+    z-index: 5;
   }
 
 
@@ -185,7 +189,11 @@
   .what__middle{
     position: relative;
     inline-size: 100%;
+    block-size: 34rem;
+  }
 
+  #middle{
+    transform: scaleY(105%);
   }
 
 
@@ -196,6 +204,7 @@
     left: 1.125rem;
     font-weight: 600;
     line-height: 1.5;
+    margin: 0;
   }
 
 

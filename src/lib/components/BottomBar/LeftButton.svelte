@@ -55,10 +55,11 @@
     @media(min-width: 71em){
         a{
             background-color: var(--goods-accent-orange);
+            gap: 1rem;
         }
 
         a:after{
-            content: "Снять мерки";
+            content: "Сохранить мерки";
             display: inline-block;
             font-family: Inter, sans-serif;
             font-size: 24px;

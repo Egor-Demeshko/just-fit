@@ -1,25 +1,25 @@
 <script>
-    import { getFirstImage } from "$lib/goods/images.js";
-    import { getProductName, getPrice } from "$lib/goods/goods.js";
+    //import { getFirstImage } from "$lib/goods/images.js";
+    //import { getProductName, getPrice } from "$lib/goods/goods.js";
     import { onMount } from 'svelte';
-    import { removeGood, setQuantity } from "$lib/scripts/cart.js";
+    import { removeGood, setQuantity/*, getImageUrl, getImageName */} from "$lib/scripts/cart.js";
+    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
 
     export let id = "";
     export let quantity = 0;
     export let total = 0;
-    let imageName = '';
-    let name = '';
+    export let name = '';
+    export let imageUrl = '';
+    export let price;
     let cartItem;
-    let price;
 
-    
-
+    console.log("imageURL: ", imageUrl);
+    /**
+     * Получение фотографий, согласно айди товара.
+    */
     onMount( () => {
-      name = getProductName(id);
-      price = getPrice(id);
+      
     });
-
-    imageName = getFirstImage(id);
 
 
     function handelClick(event){
@@ -29,6 +29,7 @@
         console.log("minus clicked");
           if(quantity == 1) {
             remove();
+            return;
           };
           if(quantity > 1) quantity -= 1;
       }
@@ -36,6 +37,8 @@
       if(target.closest(".cart-item__plus")){
         quantity = +quantity + 1;
       }
+
+      setQuantity(id, quantity);
     }
 
 
@@ -50,15 +53,15 @@
     }
 
     
-    $: if(quantity > 0)setQuantity(id, quantity);
-    $: total = price * quantity;
+    /*$: if(quantity > 0)setQuantity(id, quantity);*/
+    $: total = +(price * quantity).toFixed(2);
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <li on:click={handelClick} bind:this={cartItem}>
     <div class="cart-item">
         <div class="cart-item__image-wrapper">
-            <img src="/goods/{id}/{imageName}_small.webp" alt="{imageName} от JF" 
+            <img src="{PUBLIC_STRAPI_ORIGIN}{imageUrl}" alt="{name} от JF" 
             class="cart-item__image" loading="lazy" width="1000" height="1190">
         </div>
    
@@ -82,7 +85,7 @@
    
         <div class="cart-item__summary">
           <span class="cart-item__total">{total}р.</span>
-          <span class="cart-item__close" on:click={remove}>X</span>
+          <span class="cart-item__close" on:click|stopPropagation={remove}>X</span>
         </div>
 
       </div>

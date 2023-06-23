@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <symbol id="computer" width="52" height="50" viewBox="0 0 52 50" fill="none">
-      <path d="M16.5 31H9.2C8.08609 31 7.0178 30.5635 6.23015 29.7866C5.4425 29.0096 5 27.9559 5 26.8571V6.14286C5 5.0441 5.4425 3.99035 6.23015 3.21341C7.0178 2.43648 8.08609 2 9.2 2H42.8C43.9139 2 44.9822 2.43648 45.7698 3.21341C46.5575 3.99035 47 5.0441 47 6.14286V26.8571C47 27.9559 46.5575 29.0096 45.7698 29.7866C44.9822 30.5635 43.9139 31 42.8 31H36.5" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M1 49H51" stroke="white" stroke-width="2" stroke-linecap="round"/>
-      <path d="M26.5 27L37 40H16L26.5 27Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </symbol>
-  </defs>
-</svg>

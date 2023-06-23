@@ -1,6 +1,8 @@
 <script>
     import { onMount } from "svelte";
     import { activeFilterElements } from "$lib/scripts/stores.js";
+    import { menuOpen } from "../scripts/stores";
+    import { fly } from "svelte/transition";
 
     let activeFilters = [];
     let filters = [
@@ -37,6 +39,14 @@
     ];
     let innerWidth;
     let openAnimationClass = '';
+    let inactive = '';
+
+
+    $: if($menuOpen){
+      inactive = "inactive";
+    } else {
+      inactive = "";
+    }
 
 
     function changeShown(width){
@@ -140,7 +150,7 @@
 
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
-<div class="filter {openAnimationClass}" on:click={handelClick}>
+<div class="filter {openAnimationClass}" on:click={handelClick} class:inactive>
     {#each filters as {id, label, show} (id)}
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->
         <div id={id} 
@@ -207,6 +217,10 @@
 
   .filter_open{
     animation: 600ms forwards filter_opening ease;
+  }
+
+  .inactive{
+    display: none;
   }
 
 

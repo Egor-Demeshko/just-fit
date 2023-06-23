@@ -15,15 +15,24 @@
     export let images;
     export let prices;
     let imagesLocal = [];
+    let smallImages = '';
 
-    console.log("***********category", category);
+    
+    smallImages = images.data[0].attributes.formats.thumbnail.url;
+    
+    setContext("prices", prices)
 
-    setContext("prices", prices);
+    /*console.log("***********category", category);*/
 
     let card;
     let cardWidth;
     let inactive = '';
     let filters = [];
+    let card_on_catalog = '';
+
+    if(!goodPage){
+        card_on_catalog = "card_on_catalog";
+    }
 
 
     gainURLS();
@@ -32,7 +41,8 @@
      * получаем на файле +page.server.js
     */
     function gainURLS(){
-        imagesLocal = images.data;
+        imagesLocal = Array.from(images.data);
+        console.log("LOCAL IMAGES on COMPONENT CARD inside gainURLS", imagesLocal);
     
         /*console.log("------------GAIN URLS", imagesLocal);*/
         imagesLocal.forEach((element, i, arr) => {
@@ -40,6 +50,12 @@
         if(!element.attributes) return;
         let name = element.attributes.name;
         let url;
+
+        /*if(i == 0){
+            //сохраняем ссылку на мелкую картинку, для корзины
+            smallImage = element.attributes.formats.thumbnail.url;
+            console.log("smallImage on COMPONENT CARD inside gainURLS", smallImage);
+        }*/
                                              
         if(goodPage){
             url = element.attributes.url;
@@ -47,7 +63,7 @@
             url = element.attributes.formats.small.url;
         }
 
-        console.log("crafring name: ", name);
+        /*console.log("crafring name: ", name);*/
                                                 
         arr[i] = {
             "url":  url,
@@ -56,11 +72,15 @@
     });   
     }
 
+
+    console.log("smallImage on COMPONENT CARD ", smallImages);
+    console.log("LOCAL IMAGES on COMPONENT CARD", imagesLocal);
+
   
 
     activeFilterElements.subscribe( (array) => {
 
-        console.log("category", category);
+        /*console.log("category", category);*/
 
         for(let filter of Object.values(category)){
             
@@ -100,13 +120,13 @@
 
 
 <div class="card_wrapper" bind:this={card} class:inactive>
-    <div class="card">
+    <div class="card {card_on_catalog}">
 
         <Carousel {id} {card} {name} {imagesLocal} on:gotogoodspage={pendingGoodsPage}/>
 
 
         {#if !goodPage}
-            <AddToCart {id} {name}/>
+            <AddToCart {id} {name} {smallImages}/>
         {/if}
 
         <Label {name}/>
@@ -124,6 +144,12 @@
         display: none;
     }
 
+    @media(max-width: 52em){
+        .card{
+            max-width: 430px;
+        }
+    }
+
     @media(min-width: 52em){
 
         .card_wrapper{
@@ -132,6 +158,10 @@
             flex-flow: column;
             position: relative;
             gap: 0.5rem;
+        }
+
+        .card_on_catalog{
+            height: 470px;
         }
     }
 </style>

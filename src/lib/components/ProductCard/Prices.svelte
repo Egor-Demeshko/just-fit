@@ -30,9 +30,10 @@ itemtype="https://schema.org/Offer">
         position: absolute;
         top: 12px;
         right: 12px;
-        width: 130px;
+        width: 150px;
         height: 111px;
     }
+
 
     .previous{
         position: absolute;
@@ -42,25 +43,27 @@ itemtype="https://schema.org/Offer">
         top: 0;
         left: 0;
         background-color: var(--goods-accent-orange);
-        height: 57px;
-        width: 57px;
+        height: 50px;
+        width: 60px;
         z-index: 1;
-        border-radius: 50%;
+        border-radius: 25%;
     }
+
 
     .current{
         position: absolute;
-        height: 95px;
-        width: 95px;
+        height:60px;
+        width: 130px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: var(--icons-main-red);
-        bottom: 0;
+        top: 30px;
         right: 0;
         z-index: 5;
-        border-radius: 50%;
+        border-radius: 25%;
     }
+
 
     .text{
         font-family: Inter, sans-serif;
@@ -68,9 +71,11 @@ itemtype="https://schema.org/Offer">
         font-weight: bold;
     }
 
+
     .normal_font{
         font-size: 36px;
     }
+
 
     .small_font{
         font-size: 18px;

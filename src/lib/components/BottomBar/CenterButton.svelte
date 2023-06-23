@@ -35,8 +35,8 @@
 <style>
     a{
         display: flex;
-        width: 100px;
-        height: 100px;
+        width: 6.25rem;
+        height: 6.25rem;
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -94,6 +94,13 @@
 
     span{
         color: var(--hard-black);
+    }
+
+    @media (max-width: 25em){
+        a{
+            width: 5.5rem;
+            height: 5.5rem;
+        }
     }
 
     @media (min-width: 56em){

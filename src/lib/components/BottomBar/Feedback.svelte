@@ -8,14 +8,15 @@
     let id;
 
 
-
     onMount(() => {
         let interval;
         const {getStatement, getIds, getRandomId} = startStatements();
 
         changeView();
 
-        interval = setInterval( changeView, 12000); 
+        interval = setInterval( () => {
+            changeView();
+        }, 12000); 
 
         return () => {
             clearInterval(interval);
@@ -23,6 +24,7 @@
 
 
         function changeView(){
+            
                 id = getRandomId();
                 message = getStatement(id);
             return interval;
@@ -37,7 +39,7 @@
 <div class="feedback">
     <div id={id}>
         {#if id}
-        <img src="/src/lib/icons/general/{id}.svg#{id}" alt="логотип {id}"/>
+        <img src="/src/lib/icons/general/{id}.svg" alt="логотип {id}"/>
         <div class="text_wrapper">
             <span class="message">
                 {message}
@@ -71,13 +73,9 @@
         align-items: center;
         justify-content: space-between;
         gap: 1.5rem;
-        animation: 6s ease-in-out forwards unvisible;
+        animation: 12s ease-in-out forwards makevisible infinite;
     }
 
-    .visible{
-        display: flex;
-        animation: 11s ease-in-out forwards makevisible;
-    }
 
     .message{
         font-size: 0.75rem;

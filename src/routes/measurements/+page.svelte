@@ -5,8 +5,7 @@
     import Measurements from "$lib/components/Measurements/Measurements.svelte";
     import PopUp from "../../lib/components/PopUp.svelte";
     import CartBottomBar from "$lib/components/CartElements/CartBottomBar.svelte";
-    import { isMeasureSubmit,  
-            isMesure } from "$lib/scripts/stores";
+    import { isMeasureSubmit } from "$lib/scripts/stores";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
     import { submitPending } from "$lib/scripts/stores";
 
@@ -15,7 +14,7 @@
     let {fields, measurementsSectors, measurements} = data;
     let getSms; // временка для передачи функции
     let form;
-    isMesure.set(true);
+    submitPending.set(true);
 
     function gatherData(){
         console.log('+page.svelte submitting form');
@@ -23,6 +22,11 @@
         isMeasureSubmit.set(true);
     };
 </script>
+
+<svelte:head>
+    <meta name="robots" content="noindex">
+    <title>Страница для записи мерок в базу данных Just Fit</title>
+</svelte:head>
 
 <SimpleUpperBar/>
 <main>

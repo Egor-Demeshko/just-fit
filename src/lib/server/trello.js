@@ -1,10 +1,10 @@
 export async function trello(formData, K, T, LIST, POS, ORIGIN, PATH){
 
-      let {id, cartId, name, telephone, email, address, ...goods} = Object.fromEntries(formData.entries());
-      let cardName = `НОВЫЙ ЗАКАЗ: ИМЯ ${name}, КОНТАКТ ${telephone}, ID заказа: ${cartId}`;
+      let {id, cartId, name, phone, email, address, goods, standart_size} = Object.fromEntries(formData.entries());
+      let cardName = `НОВЫЙ ЗАКАЗ: ИМЯ ${name}, ID заказа: ${cartId}`;
   
-      let description = (`ID МЕРОК:${id} \u000A ИМЯ КЛИЕНТА:${name}\u000A Контактый телефон:${telephone} и ПОЧТА: ${email}\u000A
-                  Клиент хочет приобрести: ${JSON.stringify(goods)} \u000A АДРЕС: ${address}`);
+      let description = (`ID МЕРОК (КОНТАКТНЫЙ НОМЕР):${id} \u000A СТАНДАРТНЫЙ РАЗМЕР: ${standart_size}  ИМЯ КЛИЕНТА:${name}\u000A Контактый телефон:${phone} и ПОЧТА: ${email}\u000A
+                  Клиент хочет приобрести: ${goods} \u000A АДРЕС: ${address}`);
   
       let url = `${ORIGIN}${PATH}?idList=${LIST}&name=${cardName}&desc=${description}&
                  pos=${POS}&key=${K}&token=${T}`;

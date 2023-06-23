@@ -28,9 +28,6 @@ export const circles = writable(false);
 
 export const okbutton = writable(false);
 
-/** @description регулирует процесс отображение кнопки submit bottombar */
-export const isMesure = writable(false);
-
 /** @description запускается ли submit form  */
 export const isMeasureSubmit = writable(false);
 

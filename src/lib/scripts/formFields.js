@@ -8,7 +8,7 @@ const formFields = [
         placeholder: "Введите ваше имя",
         maxlength: '',
         required: false
-    },
+    },/*
     {
         text: "Контактный телефон: ",
         id: "phone",
@@ -18,7 +18,7 @@ const formFields = [
         placeholder: "Ваш номер для связи",
         maxlength: '13',
         required: false 
-    },
+    },*/
     {
         text: "Email: ",
         id: "email",

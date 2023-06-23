@@ -5,7 +5,7 @@
     import GoodBottomBar from "$lib/components/GoodBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
     import GoodsContact from "../../../lib/components/GoodsContact.svelte";
-    import { constants } from "$lib/constants";
+    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
 
     /**Данные с сервера, приходящие при загрузке страницке*/
     export let data;
@@ -29,7 +29,7 @@
   <meta property="og:url" content="https://justfit.by">
   <meta property="og:title" content="Мужское нижнее белье {name} от JF">
   <meta property="og:description" content="{SEO.seo_description}">
-  <meta property="og:image" content= {constants.ORIGIN}{OGimageUrl}>
+  <meta property="og:image" content= {PUBLIC_STRAPI_ORIGIN}{OGimageUrl}>
   <meta property="og:locale" content="ru_RU">
 
 </svelte:head>

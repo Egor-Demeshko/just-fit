@@ -1,6 +1,6 @@
 <script>
     import { createEventDispatcher } from "svelte";
-    import { constants } from "$lib/constants";
+    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
     import { page } from '$app/stores';
     import Prices from "./Prices.svelte";
     import Tips from "./Tips.svelte";
@@ -11,7 +11,7 @@
     export let imagesLocal;
     let label = "Галерея изображений изделия " + name;
     let cardWidth = 0;
-    console.log("!!!!!!!CAROUSEL!!!!!!!!", imagesLocal);
+    /*console.log("!!!!!!!CAROUSEL!!!!!!!!", imagesLocal);*/
 
     const dispatch = createEventDispatcher();
 
@@ -83,8 +83,8 @@
         dispatch('gotogoodspage');
     }}>
         {#each imagesLocal as image}
-            <link itemprop="image" href={constants.ORIGIN}{image.url}/>
-            <img src="{constants.ORIGIN}{image.url}" alt={image.name}
+            <link itemprop="image" href={PUBLIC_STRAPI_ORIGIN}{image.url}/>
+            <img src="{PUBLIC_STRAPI_ORIGIN}{image.url}" alt={image.name}
                 loading="lazy" width='1000' height='1190' class="image {borderRadiusClass}"/>
         {/each}
     </div>
@@ -117,6 +117,7 @@
         height: 89.21%;
         overflow-x: hidden;
         border-radius: 5px;
+        background-color: var(--background-grey);
     }
 
     .radius10{
@@ -127,7 +128,6 @@
         display: flex;
         max-width: 1000px;
         transition: transform 600ms ease;
-        background-color: var(--background-grey);
     }
 
     .image{

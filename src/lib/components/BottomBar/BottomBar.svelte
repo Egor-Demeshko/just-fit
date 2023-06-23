@@ -3,13 +3,22 @@
   import CenterButton from './CenterButton.svelte';
   import RightButton from './RightButton.svelte';
   import Feedback from './Feedback.svelte';
+  import { menuOpen } from '$lib/scripts/stores';
+  import { fly } from 'svelte/transition';
+
+  let innerWidth = 0;
 </script>
 
-<div class="bottom_bar__wrapper">
+<svelte:window bind:innerWidth={innerWidth}></svelte:window>
+
+{#if !$menuOpen}
+<div class="bottom_bar__wrapper"
+in:fly = "{{y: 200}}"
+out:fly = "{{y: 200}}">
   <div class="bottom_bar__owner">
-    <span class="bottom_bar__text">Владыко Анастасия Николаевана<br>
-      УНП: 99999999<br>
-      Дата регистрации: 05 января 2023г.<br>
+    <span class="bottom_bar__text">Демешко Егор Дмитриевич<br>
+      УНП: СВ0166482<br>
+      Дата регистрации: 19 июня 2023г.<br>
       Услуги по пошиву нижнего белья
     </span>
   </div>
@@ -18,11 +27,14 @@
 
     <CenterButton/>
 
+    {#if innerWidth > 400}
     <Feedback/>
+    {/if}
 
     <RightButton/>
   </div>
 </div>
+{/if}
 
 
 <style>

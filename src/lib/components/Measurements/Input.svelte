@@ -161,7 +161,7 @@
         top: 50%;
         width: 32px;
         height: 32px;
-        z-index: 50;
+        z-index: 5;
         cursor: pointer;
         transform: translateY(-50%);
     }
