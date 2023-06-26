@@ -1,6 +1,6 @@
 <a href="/contacts" role="button" aria-label="Перейти на страницу контактов">
     <svg>
-        <use href="/src/lib/icons/navigation.svg#contact"></use>
+        <use href="/lib/icons/navigation.svg#contact"></use>
     </svg>
 </a>
 

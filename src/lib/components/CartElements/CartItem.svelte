@@ -73,12 +73,12 @@
    
            <div class="cart-item__control">
              <svg class="cart-item__minus">
-               <use href="/src/lib/icons/general.svg#minus_small">
+               <use href="/lib/icons/general.svg#minus_small">
              </svg>
              <input type="text" inputtype="numeric" class="cart-item__quantity"
               value={quantity}>
              <svg class="cart-item__plus">
-               <use href="/src/lib/icons/general.svg#plus_small">
+               <use href="/lib/icons/general.svg#plus_small">
              </svg>
            </div>
         </div>

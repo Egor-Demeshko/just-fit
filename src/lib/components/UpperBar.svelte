@@ -1,7 +1,5 @@
 <script>
     import { menuOpen } from "$lib/scripts/stores.js";
-    import { onMount } from "svelte"; 
-
 
     
   function openMenu(){
@@ -10,9 +8,7 @@
         if(!value) return true;
       });
     }
-
     
-
     
 </script>
 
@@ -27,7 +23,7 @@
 
     <a class="logo" title="Перейти на главную страницу" href='/'>
         <svg class="logo__inner" alt="логотип Just Fit">
-            <use href="/src/lib/icons/logo/logo.svg#logo"></use>
+            <use href="/lib/icons/logo/logo.svg#logo"></use>
         </svg>   
     </a>
 
@@ -37,13 +33,13 @@
         >contact@jf.by</a>
         <div class="menu" aria-label="открывает меню" role="button" on:click={openMenu}>
             <svg class="icon" aria-disabled="true">
-                <use href="/src/lib/icons/navigation.svg#menu"></use>
+                <use href="/lib/icons/navigation.svg#menu"></use>
             </svg>
         </div>
         <div class="delivery" aria-label="Перейти на описание условий доставки">
           <a href="/delivery">
             <svg class="icon">
-                <use href="/src/lib/icons/navigation.svg#delivery"></use>
+                <use href="/lib/icons/navigation.svg#delivery"></use>
             </svg>
           </a>  
         </div>

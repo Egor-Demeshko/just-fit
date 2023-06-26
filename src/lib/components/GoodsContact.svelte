@@ -18,7 +18,7 @@ out:fly="{{x: -100}}">
   <a class="to_catalog" href="/" aria-label="перейти на главную сраницу">
     <div class="goods__return-icon">
       <svg>
-        <use href="/src/lib/icons/general.svg#catalog_small">
+        <use href="/lib/icons/general.svg#catalog_small">
       </svg>
     </div>
     <span>Перейти в каталог</span>
@@ -27,7 +27,7 @@ out:fly="{{x: -100}}">
   <a class="to_cart" href="/cart" aria-label="перейти на главную сраницу">
     <div class="goods__return-icon">
       <svg>
-        <use href="/src/lib/icons/navigation.svg#cart_icon">
+        <use href="/lib/icons/navigation.svg#cart_icon">
       </svg>
     </div>
     <span >Перейти в корзину</span>

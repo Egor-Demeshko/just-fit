@@ -29,24 +29,24 @@
     <a href="/" aria-label="Вернуться на главную страницу" title="Перейти на главную страницу"
         class="left">
         <svg aria-disabled = "true">
-            <use href="/src/lib/icons/general.svg#cancel"></use>
+            <use href="/lib/icons/general.svg#cancel"></use>
         </svg>
     </a>
     <a class="center" href="/contacts" 
         aria-label="Перейти на страницу контактов для связи с менеджерами JF"
         title="Перейти на страницу контактов">
         <svg aria-disabled="true">
-            <use class="message" href="/src/lib/icons/navigation.svg#message"></use>
+            <use class="message" href="/lib/icons/navigation.svg#message"></use>
         </svg>
     </a>
     <button class="right" disabled={disabled} aria-label="Сделать заказ">
         <svg aria-disabled="true">
-            <use href="/src/lib/icons/navigation.svg#ok"></use>
+            <use href="/lib/icons/navigation.svg#ok"></use>
         </svg>
     </button>
     <button class="ok" class:inactive on:click={closeMenu} aria-label="Закрыть окно меню">
         <svg aria-disabled>
-            <use href="/src/lib/icons/navigation.svg#ok"></use>
+            <use href="/lib/icons/navigation.svg#ok"></use>
         </svg>
     </button>
 </div>

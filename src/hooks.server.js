@@ -57,3 +57,11 @@ export async function handle({ event, resolve }) {
     const response = await resolve(event);
     return response;
 }
+
+
+export async function handleError({ error, event }) {
+
+    return {
+        message: 'mailto: JF-minsk@yandex.by',
+    };
+}

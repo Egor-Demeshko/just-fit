@@ -11,7 +11,7 @@
             <li class="pros__list-item">
                 <div class="pros__icon-wrapper">
                     <svg class="pros__img">
-                        <use href="/src/lib/icons/icons.svg#{id}"/>
+                        <use href="/lib/icons/icons.svg#{id}"/>
                     </svg>
                 </div>
                 <span class="pros__text">{advantages[id]}</span>

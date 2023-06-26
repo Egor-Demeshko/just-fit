@@ -39,7 +39,7 @@
 <div class="feedback">
     <div id={id}>
         {#if id}
-        <img src="/src/lib/icons/general/{id}.svg" alt="логотип {id}"/>
+        <img src="/lib/icons/general/{id}.svg" alt="логотип {id}"/>
         <div class="text_wrapper">
             <span class="message">
                 {message}

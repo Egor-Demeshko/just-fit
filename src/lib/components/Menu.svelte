@@ -47,7 +47,7 @@ in:fly="{{ x:200}}"
 out:fly="{{ y:200}}">
     <div class="menu__big-logo-outer">
       <svg class="menu__big-logo" alt="Большой логотип магазина PION">
-        <use href="/src/lib/icons/logo/logo.svg#logo"></use>
+        <use href="/lib/icons/logo/logo.svg#logo"></use>
       </svg>
     </div>
 

@@ -160,7 +160,7 @@
              title={label}>
             <svg class={id} 
                  aria-hidden>
-                <use href="src/lib/icons/navigation.svg#{id}"></use>
+                <use href="/lib/icons/navigation.svg#{id}"></use>
             </svg>
         </div>
     {/each}

@@ -4,7 +4,7 @@
 
 <a href="/measurements" aria-label="Перейти на страницу ввода мерок">
     <svg aria-hidden>
-        <use href={`/src/lib/icons/navigation.svg#measurement`} />
+        <use href={`/lib/icons/navigation.svg#measurement`} />
     </svg>
 </a>
 

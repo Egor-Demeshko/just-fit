@@ -21,7 +21,7 @@
     }
 
     measureSMSvarificationState.subscribe( (verified) => {
-        if(verified) circles = false;
+        if(verified) circles.set(false);
     });
 
     $: green = ($okbutton) ? "green" : ''; 
@@ -41,7 +41,7 @@ on:click={startProcess}>
     {:else}
         {#if $okbutton}
           <svg>
-            <use href="/src/lib/icons/navigation.svg#ok"></use>
+            <use href="/lib/icons/navigation.svg#ok"></use>
           </svg>
         {:else}
           <span>Получить СМС</span>

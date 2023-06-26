@@ -1,7 +1,7 @@
 <div>
     <a href='/' aria-label="Перейти на главную страницу">
         <svg aria-disabled>
-            <use href="/src/lib/icons/navigation.svg#ok"></use>
+            <use href="/lib/icons/navigation.svg#ok"></use>
         </svg>
     </a>
 </div>

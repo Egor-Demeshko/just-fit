@@ -44,7 +44,7 @@
             
             <div class="delivery__icon">
               <svg>
-                <use href="/src/lib/icons/general.svg#copy"></use>
+                <use href="/lib/icons/general.svg#copy"></use>
               </svg>
             </div>
             {#if !copy}

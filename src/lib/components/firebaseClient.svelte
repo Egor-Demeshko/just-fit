@@ -8,7 +8,6 @@ import { submitPending } from "../scripts/stores";
 
 export let buttonId;
 export let button;
-export let showInner; // используеся для удаления внутренней разметки кнопки
 export let getSms;
 export let userId;
 export let form;
@@ -112,8 +111,11 @@ function gatherFormValues(){
 
     let data = new FormData(form);
     let phone = "empty";
+
+
     if(data.get("sms")){
       phone = data.get("sms");
+      
     }
     data.delete("sms");
 

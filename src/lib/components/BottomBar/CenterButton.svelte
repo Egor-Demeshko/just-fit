@@ -24,7 +24,7 @@
 
 <a href="/cart" role="button" aria-label="перейти на страницу корзины">
     <svg aria-hidden="true">
-        <use href={"/src/lib/icons/navigation.svg#cart_icon"}></use>
+        <use href={"/lib/icons/navigation.svg#cart_icon"}></use>
     </svg>
 
     <div class="quantity_wrapper {active}">

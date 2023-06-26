@@ -5,13 +5,11 @@
     import Prices from "./Prices.svelte";
     import Tips from "./Tips.svelte";
 
-    export let id = "bikini1";
     export let card;
     export let name = '';
     export let imagesLocal;
     let label = "Галерея изображений изделия " + name;
     let cardWidth = 0;
-    /*console.log("!!!!!!!CAROUSEL!!!!!!!!", imagesLocal);*/
 
     const dispatch = createEventDispatcher();
 
@@ -96,14 +94,14 @@
         <div class="arrow_wrapper" data-arrow="left" aria-label="Листать фотографии влево"
         role="button">
             <svg class="arrow" aria-disabled="true">
-                <use href="/src/lib/icons/navigation.svg#left_arrow"></use>
+                <use href="/lib/icons/navigation.svg#left_arrow"></use>
             </svg>
         </div>
 
         <div class="arrow_wrapper" data-arrow="right" aria-label="Листать фотографии вправо"
         role="button">
             <svg class="arrow" aria-disabled="true">
-                <use href="/src/lib/icons/navigation.svg#right_arrow"></use>
+                <use href="/lib/icons/navigation.svg#right_arrow"></use>
             </svg>
         </div>
     </div>

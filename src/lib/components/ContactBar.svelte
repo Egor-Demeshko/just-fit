@@ -26,7 +26,7 @@
             label={vocForAria[icon]}
             href={hrefs[icon]}>
                 <svg class={icon}>
-                    <use href="/src/lib/icons/general.svg#{icon}"></use>
+                    <use href="/lib/icons/general.svg#{icon}"></use>
                 </svg>
         </a>
     {/each}

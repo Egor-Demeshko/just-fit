@@ -80,7 +80,7 @@ function inizializeDB(){
 
 
   function preLoadMeasurements(phone, parseMesurements){
-    console.log("preloadMeasurements: ", phone);
+
       get(child(ref(db), `measurements/${phone}`))
       .then((snapshot) => {
         console.log("preLOadMeasurements:", snapshot);

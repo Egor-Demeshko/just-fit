@@ -62,7 +62,7 @@
           <span class="accept__id">{orderId}</span>
           <button on:click={handelClick} class="accept__button" aria-label="Скопировать id заказа в Just Fit">
             <svg class="accept__icon" aria-disabled="true">
-              <use href="/src/lib/icons/general.svg#copy">
+              <use href="/lib/icons/general.svg#copy">
             </svg>
           </button>
         </div>

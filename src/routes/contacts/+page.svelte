@@ -1,5 +1,3 @@
-<script>
-</script>    
 
 <svelte:head>
     <title>Страница контактов проекта Just FIt</title>
@@ -26,7 +24,7 @@
       aria-label="Напишите нам в Telegram"
       title="Написать нам в телеграм">
         <svg class="contacts-page__telegram-icon" aria-disabled="true">
-          <use href="/src/lib/icons/general.svg#telegram">
+          <use href="/lib/icons/general.svg#telegram">
         </svg>
         <span class="contacts-page__under-heading">TELEGRAM</span>
       </a>
@@ -34,7 +32,7 @@
       <a class="contacts-page__icon" href="viber://chat?number=+375292158632" target="_blank" rel="noopener noreferrer"
       title="Написать нам в вайбер">
         <svg class="contacts-page__viber-icon">
-          <use href="/src/lib/icons/general.svg#viber">
+          <use href="/lib/icons/general.svg#viber">
         </svg>
         <span class="contacts-page__under-heading">VIBER</span>
       </a>
@@ -42,21 +40,21 @@
       <a class="contacts-page__icon" href="tel:+375292752562"
       title="Позвонить на МТС">
         <svg class="contacts-page__mts-icon">
-          <use href="/src/lib/icons/general.svg#mts">
+          <use href="/lib/icons/general.svg#mts">
         </svg>
         <span class="contacts-page__under-heading">MTS</span>
       </a>
 
       <a class="contacts-page__icon" href="/" title="Вернуться на главную страницу">
         <svg class="contacts-page__cancel-icon">
-          <use href="/src/lib/icons/general.svg#cancel">
+          <use href="/lib/icons/general.svg#cancel">
         </svg>
       </a>
 
       <a class="contacts-page__icon" href="#managers"
       title="Посмотреть контакты менеджеров">
         <svg class="contacts-page__human-icon">
-          <use href="/src/lib/icons/general.svg#human">
+          <use href="/lib/icons/general.svg#human">
         </svg>
       </a>
 
@@ -80,14 +78,14 @@
         <div class="contacts-page__buttons">
         <a class="button" href="https://t.me/anastasiya_vladyko" target="_blank" rel="noreferrer">
           <svg class="button__icon" aria-disabled="true">
-            <use href="/src/lib/icons/general.svg#telegram">
+            <use href="/lib/icons/general.svg#telegram">
           </svg>
           <span class="button__name">TELEGRAM</span>
         </a>
 
         <a class="button" href="viber://chat?number=+375292752562" target="_blank" rel="noreferrer">
           <svg class="button__icon" aria-disabled="true">
-            <use href="/src/lib/icons/general.svg#viber">
+            <use href="/lib/icons/general.svg#viber">
           </svg>
           <span class="button__name">VIBER</span>
         </a>
@@ -108,14 +106,14 @@
         <div class="contacts-page__buttons">
         <a class="button" href="https://t.me/egor_demeshko" target="_blank" rel="noreferrer nofollow">
           <svg class="button__icon" aria-disabled="true">
-            <use href="/src/lib/icons/general.svg#telegram">
+            <use href="/lib/icons/general.svg#telegram">
           </svg>
           <span class="button__name">TELEGRAM</span>
         </a>
 
         <a class="button" href="viber://chat?number=+375292158632" target="_blank" rel="noreferrer">
           <svg class="button__icon" aria-disabled="true">
-            <use href="/src/lib/icons/general.svg#viber">
+            <use href="/lib/icons/general.svg#viber">
           </svg>
           <span class="button__name">VIBER</span>
         </a>

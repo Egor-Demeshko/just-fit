@@ -45,25 +45,25 @@
     <button aria-label="Убрать данный товар из корзины" title="Убрать данный товар из корзины"
         class="left" on:click={removeOne}>
         <svg aria-disabled = "true">
-            <use href="/src/lib/icons/general.svg#minus"></use>
+            <use href="/lib/icons/general.svg#minus"></use>
         </svg>
     </button>
     <a class="center" href="/contacts" 
         aria-label="Перейти в корзину"
         title="Перейти на страницу корзины">
         <svg aria-disabled="true">
-            <use class="message" href="/src/lib/icons/navigation.svg#message"></use>
+            <use class="message" href="/lib/icons/navigation.svg#message"></use>
         </svg>
     </a>
     <button class="right" aria-label="добавить товар в корзину"
     title="Добавить товар в корзину" on:click={addOne}>
         <svg aria-disabled="true">
-            <use href="/src/lib/icons/general.svg#plus"></use>
+            <use href="/lib/icons/general.svg#plus"></use>
         </svg>
     </button>
     <!--<button class="ok" class:inactive on:click={closeMenu} aria-label="Закрыть окно меню">
         <svg aria-disabled>
-            <use href="/src/lib/icons/navigation.svg#ok"></use>
+            <use href="/lib/icons/navigation.svg#ok"></use>
         </svg>
     </button>-->
 </div>
