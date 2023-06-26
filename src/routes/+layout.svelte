@@ -3,6 +3,10 @@
     import Menu from "$lib/components/Menu.svelte";
 </script>
 
+<svelte:head>
+
+</svelte:head>
+
 <UpperBar/>
 <Menu/>
 

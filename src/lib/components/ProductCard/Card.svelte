@@ -7,6 +7,7 @@
     import { setContext } from "svelte";
     
 
+    /**все значения получаем из strapi*/
     export let category = {};
     export let id = "bikini1";
     export let name = "Трусики от Just Fit";
@@ -50,12 +51,6 @@
         if(!element.attributes) return;
         let name = element.attributes.name;
         let url;
-
-        /*if(i == 0){
-            //сохраняем ссылку на мелкую картинку, для корзины
-            smallImage = element.attributes.formats.thumbnail.url;
-            console.log("smallImage on COMPONENT CARD inside gainURLS", smallImage);
-        }*/
                                              
         if(goodPage){
             url = element.attributes.url;
@@ -72,9 +67,9 @@
     });   
     }
 
-
+/*
     console.log("smallImage on COMPONENT CARD ", smallImages);
-    console.log("LOCAL IMAGES on COMPONENT CARD", imagesLocal);
+    console.log("LOCAL IMAGES on COMPONENT CARD", imagesLocal);*/
 
   
 

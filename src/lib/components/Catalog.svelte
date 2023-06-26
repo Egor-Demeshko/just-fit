@@ -1,6 +1,5 @@
 <script>
     import Card  from "$lib/components/ProductCard/Card.svelte";
-    //import { setNames } from "$lib/goods/images";
 
     export let goods;
 </script>
@@ -22,13 +21,6 @@ main{
     align-items: center;
     justify-content: center;
 }
-
-/*.catalog__arrows-inner{
-  color: var(--icons-main-red);
-  width: 118px;
-  height: 18px;
-}*/
-
 
 @media(min-width: 52em){
   main{

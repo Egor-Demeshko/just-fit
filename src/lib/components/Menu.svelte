@@ -4,13 +4,6 @@
 
     let opens = '';
     let closes = '';
-   /* let nonactive = "";*/
-/*
-    if($menuOpen){
-        nonactive = "nonactive"
-    } else {
-      nonactive = ""
-    }*/
 
     menuOpen.subscribe( (value) => {
         if(value){
