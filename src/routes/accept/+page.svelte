@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import { setErrorMessage } from "$lib/scripts/stores";
     import ErrorMessage from "../../lib/components/ErrorMessage.svelte";
     import GreenOkSingleButton from "../../lib/components/GreenOkSingleButton.svelte";
 
@@ -32,8 +33,11 @@
 
         clipboard.writeText(orderId)
                 .then(()=>{
-                    show = "show";
-                    setTimeout( () => show = "", 5000);
+                    setErrorMessage.set({
+                      "show": "show",
+                      "title": "Ваш номер заказа скопирован в буфер обмена",
+                      "description": ""
+                    })
                 });        
     };    
 
@@ -83,7 +87,7 @@
 
   </main>
 
-  <ErrorMessage {show}>
+  <ErrorMessage>
     <h3 slot="title">Идендификатор скопирован</h3>
     <span slot="message"></span>
   </ErrorMessage>

@@ -30,6 +30,14 @@ let storage;
 updateCartFromStorage();
 
 
+export function resetCart(){
+    if(storage){
+        storage.removeItem("JF_CART");
+        cartId = '';
+    }
+}
+
+
 export function addToCart(id, imageUrl, name){
     if(!id) return;
     if(!cartId) cartId = generateCartId();

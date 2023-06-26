@@ -1,5 +1,5 @@
 import Strapi from "strapi-sdk-js";
-import { PUBLIC_STRAPI_ORIGIN } from "$env/static/puplic"
+import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
 
 export async function getGoodsForClientSide(resolve, orders){
     let strapi = new Strapi(PUBLIC_STRAPI_ORIGIN);

@@ -24,7 +24,7 @@ export async function handle({ event, resolve }) {
         event.locals = await strapi.find("goods", {
             "populate": ["images", "SEO"]
         });
-        event.pageMeta = await strapi.find("meta-dannye-straniczies", {
+        event.pageMeta = await strapi.find("seo-straniczs", {
             "filters": {
                 "page_id": "main"
             }
@@ -35,7 +35,7 @@ export async function handle({ event, resolve }) {
 
     if(event.url.pathname == "/what-is-it"){
 
-        event.pageMeta = await strapi.find("meta-dannye-straniczies", {
+        event.pageMeta = await strapi.find("seo-straniczs", {
             "filters": {
                 "page_id": "what-is-it"
             }

@@ -1,5 +1,5 @@
 <script>
-    import { getOrders, getCartId } from "$lib/scripts/cart.js";
+    import { getOrders, getCartId, resetCart } from "$lib/scripts/cart.js";
     import { onMount } from "svelte";
     import { getFormFields } from "$lib/scripts/formFields.js";
     import { enhance } from "$app/forms";
@@ -84,6 +84,8 @@
             submitPending.set(false);            
             {
                 if(result.type == 'success'){
+                    resetCart();
+                    
                     update();
                     const url = new URL('/accept', window.location.origin);
                     url.searchParams.append('id', cartId);
