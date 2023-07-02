@@ -1,3 +1,5 @@
+
+
 export async function trello(formData, K, T, LIST, POS, TRELLO_ORIGIN, TRELLO_PATH){
 
       let {id, cartId, name, phone, email, address, goods, standart_size} = Object.fromEntries(formData.entries());
@@ -12,10 +14,10 @@ export async function trello(formData, K, T, LIST, POS, TRELLO_ORIGIN, TRELLO_PA
   
       return fetch(url, {method: "POST", headers:{"Accept":"application/json"}})
             .then((response)=>{
-                console.log("response ", response.status);
+
                 if(response.ok){
                     return true;
-                }
-      });
+                }    
+      }).catch( (err) => {throw new Error(err.message) });
     
 }

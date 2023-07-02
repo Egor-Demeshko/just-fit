@@ -1,8 +1,12 @@
 import Strapi from 'strapi-sdk-js';
+import { env } from '$env/dynamic/private'
 
 
 export async function handle({ event, resolve }) {
-    const strapi = new Strapi();
+    let STRAPISDK_HOST = env.STRAPISDK_HOST;
+    const strapi = new Strapi({
+        "url": STRAPISDK_HOST
+    });
 
     /*console.log("++++++event.params.good", event.params.good);*/
     
@@ -61,7 +65,9 @@ export async function handle({ event, resolve }) {
 
 export async function handleError({ error, event }) {
 
+    console.log("hooks error", error.message);
+
     return {
-        message: 'mailto: JF-minsk@yandex.by',
+        message: JSON.stringify(error)/*'mailto: JF-minsk@yandex.by'*/,
     };
 }

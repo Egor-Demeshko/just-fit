@@ -3,7 +3,7 @@
     //import { getProductName, getPrice } from "$lib/goods/goods.js";
     import { onMount } from 'svelte';
     import { removeGood, setQuantity/*, getImageUrl, getImageName */} from "$lib/scripts/cart.js";
-    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
+    import { env } from "$env/dynamic/public";
 
     export let id = "";
     export let quantity = 0;
@@ -11,6 +11,7 @@
     export let name = '';
     export let imageUrl = '';
     export let price;
+    const PUBLIC_STRAPI_ORIGIN = env.PUBLIC_STRAPI_ORIGIN;
     let cartItem;
 
     console.log("imageURL: ", imageUrl);

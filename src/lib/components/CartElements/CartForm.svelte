@@ -23,6 +23,9 @@
     let orders = [];
     let objOrders = {};
 
+    /**@description управляет показом спиннера*/
+    let loading = true;
+
     /**@type {Array}*/
     /**получает totals итоговое значение по cart-item*/
     let totals = [];
@@ -42,13 +45,20 @@
              * получаем данные по товаром из БД.
             */
             gettingGoods = new Promise( (resolve) => {
+                loading = true;
                 getGoodsForClientSide(resolve, orders);
-            }).then( (data) => goods = data).catch( () => ErrorMessage.set({
+            })
+            .then( (data) => {
+                        loading = false;
+                        goods = data;
+                    })
+            .catch( () => ErrorMessage.set({
                                             "show": "show",
                                             "title": "Ошибка получения корзины",
-                                            "message": "Ошика получения данных. Если повторится свяжитесь с нами."
+                                            "message": "Ошибка получения данных. Если повторится свяжитесь с нами."
                                          }));                                 
     
+
     
             objOrders = Object.fromEntries(orders);
             console.log(objOrders);
@@ -59,11 +69,8 @@
 
 
 
-    function submitHandler({ cancel, formData }){
-        console.log("TRYING TO SUBMIT");
-
-        if(!formElement.reportValidity()){
-            
+    async function submitHandler({ cancel, formData }){
+        if(!formElement.reportValidity()){           
             ErrorMessage.set({
                 "show": "show",
                 "title": "Проверьте правильность ввода данных",
@@ -75,18 +82,38 @@
         /**это дисейблит сабмит баттон*/
         submitPending.set(true);
 
+        /** добавляем данные которые не попадают в formdata  при сабмите*/
         formData.append("cartId", cartId);
         formData.append("goods", JSON.stringify(objOrders));
         formData.append("total", cartTotal);
+        
+        try{
+            /** отправляем на почту данные заказа, скрипт использует PHP MAILER*/
+            await fetch("/mail.php", {
+                "method": "POST",
+                "body": formData
+            });
+        } catch(err) {
+            setErrorMessage.set({
+                        "show": "show",
+                        "title": "Ошибка подтверждения заказа",
+                        "message": `Произошла ошибка подтверждения заказа. Пожалуйста, попробуйте еще раз. Или напишите нам в мессенджер. ERROR ${err.message}`
+                    });
+
+            cancel();        
+        }
 
         return ({ update, result }) => {
 
+            /**unlock submit button*/
             submitPending.set(false);            
             {
                 if(result.type == 'success'){
                     resetCart();
                     
                     update();
+                    
+                    /**navigate to accept page*/
                     const url = new URL('/accept', window.location.origin);
                     url.searchParams.append('id', cartId);
                     window.location.assign(url.href);
@@ -102,11 +129,10 @@
             }
         }
     }
-
-   
 </script>
 
 
+<!--   HTML STARTS HERE   -->
 <form class="cart" id="cart" method="POST" use:enhance={submitHandler} bind:this={formElement}
 aria-label="Форма ввода и проверки вашего заказа в .JF">
 
@@ -119,7 +145,6 @@ aria-label="Форма ввода и проверки вашего заказа 
         <fieldset class="outline">
             <legend class="block-heading">Проверьте, пожалуйста, заказ</legend>
         
-
            { #if goods }
             <ul class="items">
 
@@ -134,11 +159,19 @@ aria-label="Форма ввода и проверки вашего заказа 
                 </li>
             </ul>
            {:else}
-            <ul class="items">
-                <div class="summary">
-                    <span class="summary__text">В корзине пусто</span>
-                </div>
-            </ul>    
+                <ul class="items">
+                    { #if loading }                       
+                            <div class="loading">
+                                <span class="big"></span>
+                                <span class="small"></span>
+                                <span class="big"></span>  
+                            </div>
+                    {:else}
+                            <div class="summary">
+                                <span class="summary__text">В корзине пусто</span>
+                            </div>
+                    { /if } 
+                </ul>       
             {/if}    
             
         </fieldset>
@@ -163,6 +196,7 @@ aria-label="Форма ввода и проверки вашего заказа 
 
     <ErrorMessage/>
 </form>
+
 
 
 <style>
@@ -241,6 +275,59 @@ aria-label="Форма ввода и проверки вашего заказа 
         gap: 0.8em;
     }
     /*--------*/
+
+
+    /**loading spinner*/
+    .loading{
+        display: flex;
+        gap: 4px;
+        height: 24px;
+        padding: 1rem 2rem;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--icons-main-red);
+        border-radius: 10px;
+        width: 6rem;
+    }
+
+    .big,
+    .small{
+        background-color: var(--background-main-white);
+        display: block;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+
+
+    .small{
+        padding: 8px;
+        animation: makeBig alternate infinite 600ms;
+    }
+
+
+    .big{
+        padding: 12px;
+        animation: makeSmall alternate infinite 600ms;
+    }
+
+    @keyframes makeBig {
+        from{
+            padding: 8px;
+        }
+        to{
+            padding: 12px;
+        }
+    }
+
+    @keyframes makeSmall {
+        from{
+            padding: 12px;
+        }
+        to{
+            padding: 8px;
+        }
+    }
+    /*--------------*/
 
 
     @media(min-width: 52em){

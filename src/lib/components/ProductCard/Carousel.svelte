@@ -1,6 +1,6 @@
 <script>
     import { createEventDispatcher } from "svelte";
-    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
+    import { env } from "$env/dynamic/public";
     import { page } from '$app/stores';
     import Prices from "./Prices.svelte";
     import Tips from "./Tips.svelte";
@@ -8,6 +8,7 @@
     export let card;
     export let name = '';
     export let imagesLocal;
+    const PUBLIC_STRAPI_ORIGIN = env.PUBLIC_STRAPI_ORIGIN;
     let label = "Галерея изображений изделия " + name;
     let cardWidth = 0;
 

@@ -5,10 +5,11 @@
     import GoodBottomBar from "$lib/components/GoodBottomBar.svelte";
     import ErrorMessage from "$lib/components/ErrorMessage.svelte";
     import GoodsContact from "../../../lib/components/GoodsContact.svelte";
-    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
+    import { env } from "$env/dynamic/public";
 
     /**Данные с сервера, приходящие при загрузке страницке*/
     export let data;
+    const PUBLIC_STRAPI_ORIGIN = env.PUBLIC_STRAPI_ORIGIN;
     let OGimageUrl;
 
     $: console.log("data on page", data.data[0].attributes);

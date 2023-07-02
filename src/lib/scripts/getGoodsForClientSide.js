@@ -1,8 +1,10 @@
 import Strapi from "strapi-sdk-js";
-import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
+import { env } from "$env/dynamic/public";
 
 export async function getGoodsForClientSide(resolve, orders){
-    let strapi = new Strapi(PUBLIC_STRAPI_ORIGIN);
+    let strapi = new Strapi({
+        "url": env.PUBLIC_STRAPI_ORIGIN
+    });
 
     let ids = orders.map( (item) => item[0]); 
     let promises = [];

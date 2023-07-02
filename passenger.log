@@ -1,0 +1,103 @@
+App 4189596 output: Error: Unable to stat() directory '/hosting1/justfitby/jf': No such file or directory (errno=2)
+App 4189634 output: Error: Unable to stat() directory '/hosting1/justfitby/jf': No such file or directory (errno=2)
+App 1660 output: Error: Unable to stat() directory '/hosting1/justfitby/jf': No such file or directory (errno=2)
+App 3010 output: Error: Unable to stat() directory '/hosting1/justfitby/jf': No such file or directory (errno=2)
+App 9076 output: /hosting1/justfitby/jf/index.js:1
+App 9076 output: import { handler } from './handler.js';
+App 9076 output: ^^^^^^
+App 9076 output: SyntaxError: Cannot use import statement outside a module
+App 9076 output:     at internalCompileFunction (node:internal/vm:73:18)
+App 9076 output:     at wrapSafe (node:internal/modules/cjs/loader:1176:20)
+App 9076 output:     at Module._compile (node:internal/modules/cjs/loader:1218:27)
+App 9076 output:     at Module._extensions..js (node:internal/modules/cjs/loader:1308:10)
+App 9076 output:     at Module.load (node:internal/modules/cjs/loader:1117:32)
+App 9076 output:     at Module._load (node:internal/modules/cjs/loader:958:12)
+App 9076 output:     at Module.require (node:internal/modules/cjs/loader:1141:19)
+App 9076 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 9076 output:     at require (node:internal/modules/cjs/helpers:110:18)
+App 9076 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 9076 output: Node.js v18.16.0
+App 135300 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 135300 output: 	return originalRequire.apply(this, arguments);
+App 135300 output:                         ^
+App 135300 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 135300 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 135300 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 135300 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 135300 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 135300 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 135300 output:   code: 'ERR_REQUIRE_ESM'
+App 135300 output: }
+App 135300 output: Node.js v18.16.0
+App 179652 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 179652 output: 	return originalRequire.apply(this, arguments);
+App 179652 output:                         ^
+App 179652 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 179652 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 179652 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 179652 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 179652 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 179652 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 179652 output:   code: 'ERR_REQUIRE_ESM'
+App 179652 output: }
+App 179652 output: Node.js v18.16.0
+App 179750 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 179750 output: 	return originalRequire.apply(this, arguments);
+App 179750 output:                         ^
+App 179750 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 179750 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 179750 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 179750 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 179750 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 179750 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 179750 output:   code: 'ERR_REQUIRE_ESM'
+App 179750 output: }
+App 179750 output: Node.js v18.16.0
+App 183606 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 183606 output: 	return originalRequire.apply(this, arguments);
+App 183606 output:                         ^
+App 183606 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 183606 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 183606 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 183606 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 183606 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 183606 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 183606 output:   code: 'ERR_REQUIRE_ESM'
+App 183606 output: }
+App 183606 output: Node.js v18.16.0
+App 183707 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 183707 output: 	return originalRequire.apply(this, arguments);
+App 183707 output:                         ^
+App 183707 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 183707 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 183707 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 183707 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 183707 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 183707 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 183707 output:   code: 'ERR_REQUIRE_ESM'
+App 183707 output: }
+App 183707 output: Node.js v18.16.0
+App 183936 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 183936 output: 	return originalRequire.apply(this, arguments);
+App 183936 output:                         ^
+App 183936 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 183936 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 183936 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 183936 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 183936 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 183936 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 183936 output:   code: 'ERR_REQUIRE_ESM'
+App 183936 output: }
+App 183936 output: Node.js v18.16.0
+App 212869 output: /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80
+App 212869 output: 	return originalRequire.apply(this, arguments);
+App 212869 output:                         ^
+App 212869 output: Error [ERR_REQUIRE_ESM]: require() of ES Module /hosting1/justfitby/jf/index.js from /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js not supported.
+App 212869 output: Instead change the require of index.js in /opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js to a dynamic import() which is available in all CommonJS modules.
+App 212869 output:     at Module.require (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:80:25)
+App 212869 output:     at loadApplication (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:243:2)
+App 212869 output:     at setupEnvironment (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:214:2)
+App 212869 output:     at Object.<anonymous> (/opt/cpanel/ea-ruby27/root/usr/share/passenger/helper-scripts/node-loader.js:133:1) {
+App 212869 output:   code: 'ERR_REQUIRE_ESM'
+App 212869 output: }
+App 212869 output: Node.js v18.16.0

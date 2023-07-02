@@ -1,13 +1,13 @@
 <script>
-    import { PUBLIC_STRAPI_ORIGIN } from "$env/static/public";
+    import { env } from "$env/dynamic/public";
     import { onMount } from "svelte";
     
-    export let id;
     export let images;
     console.log("-------------------gallery", images);
     let noafter = "gallery__no_after";
     let elem;
     let imagesArr = images.data;
+    const PUBLIC_STRAPI_ORIGIN = env.PUBLIC_STRAPI_ORIGIN;
 
 
    function handelScroll(){
