@@ -14,7 +14,7 @@
     const PUBLIC_STRAPI_ORIGIN = env.PUBLIC_STRAPI_ORIGIN;
     let cartItem;
 
-    console.log("imageURL: ", imageUrl);
+    /*console.log("imageURL: ", imageUrl);*/
     /**
      * Получение фотографий, согласно айди товара.
     */
@@ -27,7 +27,7 @@
       let target = event.target;
 
       if(target.closest('.cart-item__minus')){
-        console.log("minus clicked");
+        /*console.log("minus clicked");*/
           if(quantity == 1) {
             remove();
             return;

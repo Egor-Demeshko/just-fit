@@ -17,7 +17,7 @@
     submitPending.set(true);
 
     function gatherData(){
-        console.log('+page.svelte submitting form');
+        /*console.log('+page.svelte submitting form');*/
         submitPending.set(true);
         isMeasureSubmit.set(true);
     };

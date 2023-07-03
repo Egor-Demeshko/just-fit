@@ -14,7 +14,7 @@
     let disabled;
 
     $: disabled = $submitPending;
-    console.log("disabled ", disabled);
+    /*console.log("disabled ", disabled);*/
 
 
     function closeMenu(){}

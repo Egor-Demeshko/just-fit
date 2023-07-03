@@ -4,7 +4,7 @@
     import { getFormFields } from "$lib/scripts/formFields.js";
     import { enhance } from "$app/forms";
     import { submitPending } from "$lib/scripts/stores.js";
-    import { setErrorMessage  } from "../../scripts/stores";
+    import { setErrorMessage, setSpinner } from "../../scripts/stores";
     import { getGoodsForClientSide } from "$lib/scripts/getGoodsForClientSide";
     import CartItem from "$lib/components/CartElements/CartItem.svelte";
     import Input from "$lib/components/CartElements/Input.svelte";
@@ -23,9 +23,6 @@
     let orders = [];
     let objOrders = {};
 
-    /**@description управляет показом спиннера*/
-    let loading = true;
-
     /**@type {Array}*/
     /**получает totals итоговое значение по cart-item*/
     let totals = [];
@@ -42,26 +39,30 @@
         if(orders.length != 0){
             
             /**
-             * получаем данные по товаром из БД.
+             * получаем данные по товарам из БД.
             */
-            gettingGoods = new Promise( (resolve) => {
-                loading = true;
-                getGoodsForClientSide(resolve, orders);
+            gettingGoods = new Promise( (resolve, reject) => {
+                setSpinner.set(true);
+                getGoodsForClientSide(resolve, orders, reject);
             })
             .then( (data) => {
-                        loading = false;
+                        setSpinner.set(false);
                         goods = data;
                     })
-            .catch( () => ErrorMessage.set({
-                                            "show": "show",
-                                            "title": "Ошибка получения корзины",
-                                            "message": "Ошибка получения данных. Если повторится свяжитесь с нами."
-                                         }));                                 
+            .catch( (err) => {
+                setSpinner.set(false);
+                setErrorMessage.set({
+                                        "show": "show",
+                                        "title": "Ошибка получения корзины",
+                                        "message": `Ошибка получения данных. Если повторится свяжитесь с нами. Ошибка "${err}"`
+                                    })                                
+
+            });
     
 
     
             objOrders = Object.fromEntries(orders);
-            console.log(objOrders);
+            /*console.log(objOrders);*/
             
         }
     });
@@ -71,7 +72,7 @@
 
     async function submitHandler({ cancel, formData }){
         if(!formElement.reportValidity()){           
-            ErrorMessage.set({
+            setErrorMessage.set({
                 "show": "show",
                 "title": "Проверьте правильность ввода данных",
                 "message": "Особенно убедитесь что вы указаля обязательные данные"
@@ -160,7 +161,7 @@ aria-label="Форма ввода и проверки вашего заказа 
             </ul>
            {:else}
                 <ul class="items">
-                    { #if loading }                       
+                    { #if $setSpinner }                       
                             <div class="loading">
                                 <span class="big"></span>
                                 <span class="small"></span>

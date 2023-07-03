@@ -58,7 +58,7 @@ function inizializeDB(){
                return set(ref(db, `users/${uid}`), nextDataToBeWritten);
              })
              .then( () => {
-              console.log("мерки записаны");
+              /*console.log("мерки записаны");*/
                setErrorMessage.set({
                 "show": "show",
                 "message": "Набирайте или пишите при возникновении вопросов и/или пожеланий",
@@ -83,7 +83,7 @@ function inizializeDB(){
 
       get(child(ref(db), `measurements/${phone}`))
       .then((snapshot) => {
-        console.log("preLOadMeasurements:", snapshot);
+        /*console.log("preLOadMeasurements:", snapshot);*/
         if(snapshot.exists()){
           return snapshot.val();
         }
@@ -92,7 +92,7 @@ function inizializeDB(){
         parseMesurements(measurements);
       })
       .catch( (error) => {
-        console.log("measurements preload ERROR: ", error.message);
+        /*console.log("measurements preload ERROR: ", error.message);*/
       });
   }
 }

@@ -36,3 +36,7 @@ export const setErrorMessage = writable({"show": "",
     "title": "Сообщение",
     "message": "Сообщение"
 });
+
+
+/**SPINNER CONTROLLER FOR BUTTONS */
+export const setSpinner = writable(false);

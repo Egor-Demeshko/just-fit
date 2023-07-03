@@ -120,7 +120,7 @@ export function setQuantity(id, quantity){
     if(!cart) return;
 
     cart[id] = quantity;
-    console.log("setQuantity",cart);
+    /*console.log("setQuantity",cart);*/
     update();
     updateStorage();
 }
@@ -146,7 +146,7 @@ function updateStorage(){
         /*objToBeSend["imagesForCart"] = imagesForCart;*/
 
         storage.setItem(STORAGE_ID, JSON.stringify(objToBeSend));
-        console.log("storageUpdated", storage.getItem(STORAGE_ID));
+        /*console.log("storageUpdated", storage.getItem(STORAGE_ID));*/
 
         objToBeSend = null;
         return true;
@@ -194,7 +194,7 @@ function updateCartFromStorage(){
             localCart = null;
         }
 
-        console.log("updateCart", cart);
+        /*console.log("updateCart", cart);*/
 
         update();
       }

@@ -131,15 +131,15 @@
             /*если activated тогда добавляем в store(activeFilterElements)*/
             if(svg.classList.contains('activated')){
                 if(activeFilters.includes(id)) return;
-                  console.log("activefilterS: ", activeFilters);
+                  /*console.log("activefilterS: ", activeFilters);*/
                   activeFilterElements.set([...activeFilters, id]);
-                  console.log("store: ", $activeFilterElements);
+                  /*console.log("store: ", $activeFilterElements);*/
             } else {
                activeFilters = activeFilters.filter( (value) => {
                     if(value != id) return value;
                });
                activeFilterElements.set([...activeFilters]);
-               console.log("minus ", $activeFilterElements);
+               /*console.log("minus ", $activeFilterElements);*/
             }
         }
     }

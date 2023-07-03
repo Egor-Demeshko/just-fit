@@ -15,8 +15,8 @@
     $: console.log("data on page", data.data[0].attributes);
 
     let {fitid:  id, images, name, advantages, description, SEO, prices} = data.data[0].attributes;
-    console.log("images **************8 ", images); 
-    console.log("**** images OGIMAGEURL ****", images.data[0].attributes); 
+    /*console.log("images **************8 ", images); 
+    console.log("**** images OGIMAGEURL ****", images.data[0].attributes); */
     if(images.data[0].attributes){
       OGimageUrl = images.data[0].attributes.formats.small.url;
     }

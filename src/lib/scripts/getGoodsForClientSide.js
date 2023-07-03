@@ -1,7 +1,7 @@
 import Strapi from "strapi-sdk-js";
 import { env } from "$env/dynamic/public";
 
-export async function getGoodsForClientSide(resolve, orders){
+export async function getGoodsForClientSide(resolve, orders, reject){
     let strapi = new Strapi({
         "url": env.PUBLIC_STRAPI_ORIGIN
     });
@@ -14,22 +14,33 @@ export async function getGoodsForClientSide(resolve, orders){
     ids.forEach( (id) => {
         promises.push(
             new Promise( (resolve, reject) => {
-                const data = strapi.find("goods", {
-                    filters: {
-                        "fitid": {
-                            $eq: id
-                        }
-                    },
-                    populate: ["images"]
-                });
-
-                resolve(data);
+                let data;
+                
+                try{
+                    data = strapi.find("goods", {
+                        filters: {
+                            "fitid": {
+                                $eq: id
+                            }
+                        },
+                        populate: ["images"]
+                    });
+                    resolve(data);
+                } catch(err){
+                    throw err;
+                }
             })
         );
     });
 
+    try{
+        dataFromDB = await Promise.all(promises);
+    } catch(err){
+        reject(err.message || "Не получилось сделать запрос в базу данных");
+        return false;
+    }
 
-    dataFromDB = await Promise.all(promises);
+
     
     imageNamePrepared = dataFromDB.map( (item) => {
         let obj = item.data[0];
@@ -42,6 +53,7 @@ export async function getGoodsForClientSide(resolve, orders){
         }
     });
     
+
     resolve(imageNamePrepared)
     return true;
 }

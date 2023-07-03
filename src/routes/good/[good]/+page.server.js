@@ -7,7 +7,7 @@
 
 export function load( {params, locals} ){
     let goodData;
-    console.log("start of loading function: ", locals.data[0].attributes);
+    /*console.log("start of loading function: ", locals.data[0].attributes);*/
 
     if(locals){
        /* goodData = getAll(params.good);*/
@@ -15,8 +15,8 @@ export function load( {params, locals} ){
         "fitid": params.good
        });*/
        goodData = locals;
-       console.log("goodDATA", goodData);
-       console.log("goodData IMAGES");
+       /*console.log("goodDATA", goodData);
+       console.log("goodData IMAGES");*/
     } else {
         throw new Error(404, "Not found");
     }

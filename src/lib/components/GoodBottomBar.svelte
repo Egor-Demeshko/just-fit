@@ -11,7 +11,7 @@
 
 
     $: if($menuOpen){
-        console.log("hiding");
+        /*console.log("hiding");*/
         hidebar = "hidebar";
     } else {
         hidebar = "";

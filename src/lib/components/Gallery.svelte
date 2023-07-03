@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     
     export let images;
-    console.log("-------------------gallery", images);
+    /*console.log("-------------------gallery", images);*/
     let noafter = "gallery__no_after";
     let elem;
     let imagesArr = images.data;
@@ -15,9 +15,9 @@
     let clientHeight = elem.clientHeight;
     let difference = scrollHeight - clientHeight;
 
-    console.log("scrollHeight: ", scrollHeight);
+    /*console.log("scrollHeight: ", scrollHeight);
     console.log("clientHeight: ", clientHeight);
-    console.log("elem.scrollTop ", elem.scrollTop);
+    console.log("elem.scrollTop ", elem.scrollTop);*/
 
     if(difference === 0){
       noafter = "gallery__no_after";

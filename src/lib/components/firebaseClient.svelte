@@ -15,31 +15,31 @@ export let form;
 let auth = dbController.auth;
 
 $: if($isMeasureSubmit){
-  console.log("fireconsole answering on submiting request");
+ /*console.log("fireconsole answering on submiting request");*/
   gatherFormValues();
 }
   
 
 onMount( () => {
     if(window){
-        console.log("firebaseclient - iniytializing recaptcha");
+        /*console.log("firebaseclient - iniytializing recaptcha");*/
         window.recaptchaVerifier = new dbController.recaptcha( buttonId, {
             "size": "invisible",
             "badge": "bottomleft",
             "defaultCountry": "BY",
             "callback": () => {
-                console.log("recapatcha SOLVED");
+                /*console.log("recapatcha SOLVED");*/
                 //TODO start button animation
             }
         }, auth);
     } else {
-        console.log("on recaptcha window undefined");
+        /*console.log("on recaptcha window undefined");*/
     }
 
 });
 
 export function showAndProceed(){
-    console.log("SHOW AND PROCEED");
+    /*console.log("SHOW AND PROCEED");*/
     //showInner = false;
     let verifier = window.recaptchaVerifier;
 
@@ -50,7 +50,7 @@ export function showAndProceed(){
     signInWithPhoneNumber(auth, phoneNumber, verifier)    //TEST +16505551234
         .then(async (confirmationResult)=>{
           phoneNumber = phoneNumber.replace('+', '');
-          console.log("signing with new phonenumber: ", phoneNumber);
+          /*console.log("signing with new phonenumber: ", phoneNumber);*/
           /**store, показывает попап*/
           popUpShow.set({
               "state": true,
@@ -83,7 +83,7 @@ export function showAndProceed(){
           submitPending.set(false);
       })
       .catch( (error)=>{
-          console.log(error.message);
+          /*console.log(error.message);*/
       });
 
 
@@ -128,11 +128,11 @@ function gatherFormValues(){
         }
       }
 
-      console.log("measurementsToSend: ", measurementsToSend);
+      /*console.log("measurementsToSend: ", measurementsToSend);*/
       if (userId){
         dbController.writeToBase(measurementsToSend, phone, userId, button);
       } else {
-        console.log("db write error: no id");
+        /*console.log("db write error: no id");*/
       }
     }
 

@@ -43,7 +43,7 @@
     */
     function gainURLS(){
         imagesLocal = Array.from(images.data);
-        console.log("LOCAL IMAGES on COMPONENT CARD inside gainURLS", imagesLocal);
+        /*console.log("LOCAL IMAGES on COMPONENT CARD inside gainURLS", imagesLocal);*/
     
         /*console.log("------------GAIN URLS", imagesLocal);*/
         imagesLocal.forEach((element, i, arr) => {
