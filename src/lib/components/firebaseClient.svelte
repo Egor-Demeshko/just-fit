@@ -1,6 +1,6 @@
 <script>
 import { onMount } from "svelte";
-import { popUpShow, circles, okbutton, isMeasureSubmit } from "$lib/scripts/stores.js";
+import { popUpShow, circles, okbutton, isMeasureSubmit, setErrorMessage } from "$lib/scripts/stores.js";
 import { dbController } from "../scripts/firebase";
 import { validateCode } from "../scripts/validateCode";
 import { submitPending } from "../scripts/stores";
@@ -57,16 +57,29 @@ export function showAndProceed(){
               "message": false,
               "sms": true
           });
-
-          let smsCode = await getSms();
+          let smsCode;
+          
+          
+          try{
+            smsCode = await getSms();            
+          } catch (err){
+            setErrorMessage.set({
+              "show": "show",
+              "title": "Ошибка вводы смс"
+            });
+          } finally{
+            popUpShow.set({
+                "state": false,
+                "message": false,
+                "sms": false
+            });
+          }
                       
-          popUpShow.set({
-              "state": false,
-              "message": false,
-              "sms": false
-          });
-
-          userId = await validateCode(confirmationResult, smsCode.code);
+          try{
+            userId = await validateCode(confirmationResult, smsCode.code);
+          } catch(err){
+            throw new Error(err.message);
+          }
 
           userId = userId.user.uid;
           
@@ -83,6 +96,13 @@ export function showAndProceed(){
           submitPending.set(false);
       })
       .catch( (error)=>{
+          circles.set(false);
+
+          setErrorMessage.set({
+            "show": "show",
+            "title": "Ошибка проверки смс",
+            "description": "Ошибка проверки смс. Возможно ошибка сети, возможно не верно введен код. Попробуйте еще раз"
+          })
           /*console.log(error.message);*/
       });
 

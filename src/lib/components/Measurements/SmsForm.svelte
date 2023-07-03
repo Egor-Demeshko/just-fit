@@ -16,8 +16,8 @@ export async function getSms(){
     function controlKeyDown(e){
     e.preventDefault();
     e.stopPropagation();
-    let number = parseInt(e.key) || "";
-    if(!number || !Number.isInteger(number) || e.key === "Backspace"){
+    let number = parseInt(e.key) ?? "";
+    if(number == "undefined" || !Number.isInteger(number) || e.key === "Backspace"){
       return;
     }
 
