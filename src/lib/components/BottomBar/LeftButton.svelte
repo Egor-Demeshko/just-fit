@@ -3,7 +3,7 @@
 </script>
 
 <a href="/measurements" aria-label="Перейти на страницу ввода мерок">
-    <svg aria-hidden>
+    <svg aria-disabled="true">
         <use href={`/lib/icons/navigation.svg#measurement`} />
     </svg>
 </a>

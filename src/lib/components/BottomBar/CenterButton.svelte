@@ -23,7 +23,7 @@
 </script>
 
 <a href="/cart" role="button" aria-label="перейти на страницу корзины">
-    <svg aria-hidden="true">
+    <svg aria-disabled="true">
         <use href={"/lib/icons/navigation.svg#cart_icon"}></use>
     </svg>
 

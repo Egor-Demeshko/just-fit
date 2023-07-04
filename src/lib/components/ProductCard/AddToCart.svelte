@@ -26,13 +26,13 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="block" on:click={handelClick}>
     <div role="button" class="icon_wrapper left" data-cart="remove" aria-label="убрать одну единицу {name} из корзины">
-        <svg aria-hidden class="icon">
+        <svg aria-disabled="true" class="icon">
             <use href="/lib/icons/general.svg#minus"></use>
         </svg>
     </div>
 
     <div role="button" class="icon_wrapper right" data-cart="add" aria-label="добавить одну единицу {name} в корзину">
-        <svg aria-hidden class="icon">
+        <svg aria-disabled="true" class="icon">
             <use href="/lib/icons/general.svg#plus"></use>
         </svg>
     </div>

@@ -159,7 +159,7 @@
              aria-label={label} 
              title={label}>
             <svg class={id} 
-                 aria-hidden>
+                 aria-disabled="true">
                 <use href="/lib/icons/navigation.svg#{id}"></use>
             </svg>
         </div>
