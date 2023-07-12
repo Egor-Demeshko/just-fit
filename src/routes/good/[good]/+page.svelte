@@ -19,6 +19,7 @@
     console.log("**** images OGIMAGEURL ****", images.data[0].attributes); */
     if(images.data[0].attributes){
       OGimageUrl = images.data[0].attributes.formats.small.url;
+      if(OGimageUrl.startsWith("/")) OGimageUrl = OGimageUrl.slice(1);
     }
   
 </script>
@@ -27,7 +28,8 @@
 
   <title>{SEO.seo_title}</title>
   <meta name="description" content={SEO.seo_description}/>
-  <meta property="og:url" content="https://justfit.by">
+  <link rel="canonical" href="https://just-fit.by/good/{id}">
+  <meta property="og:url" content="https://justfit.by/good/{id}">
   <meta property="og:title" content="Мужское нижнее белье {name} от JF">
   <meta property="og:description" content="{SEO.seo_description}">
   <meta property="og:image" content= {PUBLIC_STRAPI_ORIGIN}{OGimageUrl}>
