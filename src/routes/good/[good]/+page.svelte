@@ -12,7 +12,7 @@
     const PUBLIC_STRAPI_ORIGIN = env.PUBLIC_STRAPI_ORIGIN;
     let OGimageUrl;
 
-    $: console.log("data on page", data.data[0].attributes);
+    /*$: console.log("data on page", data.data[0].attributes);*/
 
     let {fitid:  id, images, name, advantages, description, SEO, prices} = data.data[0].attributes;
     /*console.log("images **************8 ", images); 

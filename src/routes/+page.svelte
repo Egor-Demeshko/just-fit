@@ -50,7 +50,7 @@
     <title>{pageMeta.title}</title>
     <meta name="description" content={pageMeta.description}>
     <link rel="canonical" href="https://just-fit.by">
-    <meta property="og:title" content="Пошив мужского нижнего белья Just-Fit">
+    <meta property="og:title" content="Изготовление мужского нижнего белья Just-Fit">
     <meta property="og:site_name" content="Just-Fit">
     <meta property="og:url" content="https://just-fit.by">
     <meta property="og:description" content="Проект Just-Fit позволяет вам заказать белье, которое будет изготовлено исключительно для. Можно до заказа выбрать цвет, резинки и много чего еще. Доставка и почтовые отправления.">
