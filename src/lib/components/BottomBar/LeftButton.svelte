@@ -28,8 +28,8 @@
 
     svg{
         color: var(--icons-white);
-        width: 111px;
-        height: 39px;
+        width: 88px;
+        height: 31px;
     }
 
     a:hover svg,

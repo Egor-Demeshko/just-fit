@@ -114,9 +114,10 @@
     .carousel{
         position: relative;
         height: 89.21%;
+        width: 100%;
         overflow-x: hidden;
         border-radius: 5px;
-        background-color: var(--background-grey);
+        background: radial-gradient(at top left, #FFBB0C2D, #FF2E0020);
     }
 
     .radius10{
@@ -127,6 +128,8 @@
         display: flex;
         max-width: 1000px;
         transition: transform 600ms ease;
+        align-items: center;
+        height: 100%;
     }
 
     .image{
@@ -135,6 +138,7 @@
         block-size: auto;
         border-radius: 5px;
         object-fit: contain;
+        
     }
 
     .border10{
@@ -165,5 +169,11 @@
 
     .arrow_wrapper{
         padding: 10px 0 10px 10px;
+    }
+
+    @media screen and (max-width: 32em) {
+        .carousel{
+            width: 100%;
+        }
     }
 </style>

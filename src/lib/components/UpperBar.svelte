@@ -1,5 +1,9 @@
 <script>
     import { menuOpen } from "$lib/scripts/stores.js";
+    import RunningLine from "$lib/components/Loaders/RunningLine.svelte";
+
+    /**флаг который отвечает за лоадер*/
+    let loaderActive = false;
 
     
   function openMenu(){
@@ -11,6 +15,8 @@
     
     
 </script>
+
+<svelte:document on:loader={ () => loaderActive = !loaderActive }></svelte:document>
 
 
 <header class="upperBar">
@@ -29,21 +35,29 @@
 
 
     <div class="right">
-        <a class="mail" href="mailto:contact@jf.by" aria-label="написать на почту"
-        >contact@jf.by</a>
+        <a class="mail" href="mailto:mail@just-fit.by" aria-label="Написать на почту mail@just-fit.by"
+        >mail@just-fit.by</a>
         <div class="menu" aria-label="открывает меню" role="button" on:click={openMenu}>
             <svg class="icon" aria-disabled="true">
                 <use href="/lib/icons/navigation.svg#menu"></use>
             </svg>
         </div>
-        <div class="delivery" aria-label="Перейти на описание условий доставки">
-          <a href="/delivery">
+        <div class="delivery">
+          <a href="/delivery" aria-label="Перейти на описание условий доставки" 
+          title="Перейти на страницу описания доставки">
             <svg class="icon">
                 <use href="/lib/icons/navigation.svg#delivery"></use>
             </svg>
           </a>  
         </div>
     </div>
+
+
+    {#if loaderActive}
+      <div class="lines_wrapper">
+        <RunningLine/>
+      </div>
+    {/if}
 
 
 </header>
@@ -83,7 +97,7 @@
 
   .logo__inner{
     width: 100%;
-    max-block-size: 4.75rem;
+    max-block-size: 3.5rem;
   }
 
 
@@ -133,6 +147,13 @@
 
   .delivery{
     display: none;
+  }
+
+
+  .lines_wrapper{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
   }
 
 
@@ -186,6 +207,11 @@
 
     .logo:hover{
       color: var(--goods-light-orange);
+    }
+
+
+    .logo__inner{
+      max-block-size: 5.5rem;
     }
 
     .delivery, .menu{

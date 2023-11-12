@@ -1,0 +1,23 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/hosting1/justfitby/jf"
+PassengerBaseURI "/"
+PassengerNodejs "/hosting1/justfitby/nodevenv/jf/18/bin/node"
+PassengerAppType node
+PassengerStartupFile app.cjs
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+SetEnv K ffa56b966b0dbfa6a5e313afae2b0c22
+SetEnv LIST 61bdda56748ef623d0102b38
+SetEnv POS 1
+SetEnv PUBLIC_STRAPI_ORIGIN https://api.just-fit.by/
+SetEnv STRAPISDK_HOST http://api.just-fit.by
+SetEnv T ATTAa84d9e1dee8fa24ccaa965ebb869dcf868e403ad313cf43f59ff4886b84cb3c4166FE031
+SetEnv TRELLO_ORIGIN https://api.trello.com/
+SetEnv TRELLO_PATH 1/cards/
+SetEnv YML_PATH ../public_html/feed.yml
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END
+<Files "feed.yml">
+    Header set Content-Type "application/xml"
+</Files>

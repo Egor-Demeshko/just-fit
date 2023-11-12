@@ -38,7 +38,7 @@
 </svelte:head>
 
 <div class="goods" itemscope itemtype="https://schema.org/Product">
-    <meta itemprop="{name}"/>
+    <meta itemprop="name" content="{name}"/>
     <Gallery {id} {images}/>
 
     <div class="goods__images">

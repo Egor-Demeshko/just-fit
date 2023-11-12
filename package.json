@@ -8,15 +8,16 @@
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/adapter-node": "^1.2.4",
-		"@sveltejs/kit": "^1.5.0",
-		"svelte": "^3.54.0",
-		"vite": "^4.3.0"
+		"@sveltejs/adapter-auto": "^2.1.1",
+		"@sveltejs/adapter-node": "^1.3.1",
+		"@sveltejs/kit": "^1.27.3",
+		"svelte": "^4.2.2",
+		"vite": "^4.5.0"
 	},
 	"type": "module",
 	"dependencies": {
-		"firebase": "^9.22.1",
-		"strapi-sdk-js": "^2.2.0"
+		"firebase": "^9.23.0",
+		"motion": "^10.16.4",
+		"strapi-sdk-js": "^2.3.3"
 	}
 }

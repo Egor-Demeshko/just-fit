@@ -22,21 +22,21 @@
     subscribe(updateQuantity);
 </script>
 
-<a href="/cart" role="button" aria-label="перейти на страницу корзины">
+<a href="/cart" aria-label="Перейти на страницу корзины" title="Перейти на страницу корзины">
     <svg aria-disabled="true">
         <use href={"/lib/icons/navigation.svg#cart_icon"}></use>
     </svg>
 
     <div class="quantity_wrapper {active}">
-        <span>{total}</span>
+        <span aria-label="Общее количество заказанных товаров которые находятся в корзине">{total}</span>
     </div>
 </a>
 
 <style>
     a{
         display: flex;
-        width: 6.25rem;
-        height: 6.25rem;
+        width: 5rem;
+        height: 5rem;
         align-items: center;
         justify-content: center;
         position: absolute;
@@ -56,8 +56,8 @@
 
 
     svg{
-        width: 54px;
-        height: 54px;
+        width: 2.9rem;
+        height: 2.9rem;
         color: var(--icons-white);
     }
 
@@ -71,14 +71,14 @@
     }*/
 
     .quantity_wrapper{
-        width: 39px;
-        height: 39px;
+        width: 1.9rem;
+        height: 1.9rem;
         border-radius: 50%;
         display: none;
         justify-content: center;
         align-items: center;
         background-color: var(--goods-accent-orange);
-        font-size: 24px;
+        font-size: 1.4rem;
         font-weight: bold;
         font-family: Inter, sans-serif;
         position: absolute;

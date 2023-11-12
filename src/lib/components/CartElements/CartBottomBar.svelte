@@ -108,11 +108,6 @@
         width: 100%;
     }
 
-    .center svg{
-        width: 50px;
-        height: 50px;
-    }
-
     .left{
         flex: 1;
         display: flex;
@@ -158,6 +153,12 @@
         color: inherit;
     }
 
+
+    .center svg{
+        width: 50px;
+        height: 50px;
+    }
+
     .center:hover{
         filter: drop-shadow(var(--orange-shadow));
     }
@@ -179,6 +180,7 @@
         .center{
             width: 5.5rem;
             height: 5.5rem;
+            padding: .8rem;
         }
     }
 

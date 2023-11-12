@@ -117,11 +117,11 @@
 <div class="card_wrapper" bind:this={card} class:inactive>
     <div class="card {card_on_catalog}">
 
-        <Carousel {id} {card} {name} {imagesLocal} on:gotogoodspage={pendingGoodsPage}/>
+        <Carousel {card} {name} {imagesLocal} on:gotogoodspage={pendingGoodsPage}/>
 
 
         {#if !goodPage}
-            <AddToCart {id} {name} {smallImages}/>
+            <AddToCart {id} {name}/>
         {/if}
 
         <Label {name}/>

@@ -11,7 +11,7 @@
     let hrefs = {
       "telegram": "https://t.me/just_fit_belarus",
       "viber": "viber:chat?number=+375292752562",
-      "mail": "mailto: jf-minsk@yandex.by",
+      "mail": "mailto: mail@just-fit.by",
       "a1": "tel: +375296107173",
       "mts": "tel: +375292752562",
       "question_mark": "/what-is-it"
@@ -23,7 +23,7 @@
     {#each iconsNames as icon (icon)}
         <a target="_blank"
             rel="noreferer external"
-            label={vocForAria[icon]}
+            aria-label={vocForAria[icon]}
             href={hrefs[icon]}>
                 <svg class={icon}>
                     <use href="/lib/icons/general.svg#{icon}"></use>

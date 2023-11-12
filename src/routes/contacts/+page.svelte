@@ -11,7 +11,7 @@
       <div class="contacts-page__texts">
       <h1 class="contacts-page__heading">КОНТАКТЫ:</h1>
       <a href="tel: +375292752562" class="contacts-page__numbers">+375292752562</a>
-      <a href="mailto: mail@pion.by" class="contacts-page__email">mail@pion.by</a>
+      <a href="mailto: mail@just-fit.by" class="contacts-page__email">mail@just-fit.by</a>
     </div>
       <div class="contacts-page__icons">
 

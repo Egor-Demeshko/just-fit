@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<yml_catalog date="2023-11-12T18:25:57+03:00">
+<shop>
+<name>Just-fit</name>
+<company>Самозанятый Демешко Е.Д.</company>
+<url>https://just-fit.by</url>
+<platform>SvelteKit</platform>
+<categories>
+    <category id="1">Мужское нижнее белье</category>
+    <category id="10" parentId="1">Мужские трусы слипы</category>
+    <category id="11" parentId="1">Мужские трусы стринги</category>
+    <category id="12" parentId="1">Мужские трусы боксеры</category>
+    <category id="13" parentId="1">Кружевное мужское белье</category>
+</categories>
+<delivery-options>
+    <option cost="6" days="7"/>
+    <option cost="0" days="7"/>
+</delivery-options>
+<pickup-options>
+    <option cost="0" days="7"/>
+</pickup-options>
+<offers><offer id="1">
+        <name>Слипы классические .JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/slipy_classic_white</url>
+        <price>32</price>
+        <oldprice>32</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_belye_slipy_ot_Just_Fit_s_vytochkoj_vide_speredi_9f455edf10.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Классические мужские слипы из высококачественной хлопкой ткани. Впереди присуствует выточка, изнутри все швы закрыты. Нет болтающихся кусков ткани.
+Трусы крепкого и строго кроя. Очень приятные тактильно. Ощущаются уверенно и крепко. Вы можете выбрать цвет при заказе, а также изменить резинку сверху. Ее можно сделать вшитой и тонкой.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="2">
+        <name>Мужские Стринги Simple .JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_simple_black</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_chernye_stringi_muzhskie_ot_Just_fit_vide_speredi_00c11e7402.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги, выполненные из микрофибры, представляют собой стильное и комфортное белье для мужчин. Они доступны в черном цвете, что придает им элегантный и сексуальный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя. 
+
+Вырезы для ног выполнены с использованием мягкой резинки, обеспечивая идеальную посадку и комфорт при ношении. По талии расположена узкая резинка, которая обеспечивает надежную фиксацию и поддержку.
+
+Помимо стандартного дизайна, предлагается возможность выбрать широкую белую резинку, изменить цвет материала или выбрать другой материал, чтобы создать уникальный и индивидуальный вид стрингов.
+
+Мужские стринги из микрофибры - это отличный выбор для мужчин, которые ценят комфорт, стиль и индивидуальность. Они подходят для повседневного использования или для особых случаев, когда требуется выглядеть особенно привлекательно и сексуально.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="3">
+        <name>Слипы анатомические. .JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/sleepy_anatomic_black</url>
+        <price>37</price>
+        <oldprice>37</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_chernye_slipy_muzhskie_just_fit_s_karmanom_6f4a32b411.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские слипы с анатомическим кармашком – это идеальное белье для мужчин, которые ценят комфорт и практичность. Изготовленные из кулирки, которая состоит из хлопка с добавлением лайкры, они обеспечивают максимальную мягкость и эластичность. Черный цвет придает им стильный и элегантный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, чтобы удовлетворить индивидуальные предпочтения. Вырезы для ног оснащены мягкой резинкой, которая обеспечивает идеальную посадку и комфорт во время носки. По талии расположена широкая белая резинка, которая надежно фиксирует белье и обеспечивает поддержку.
+
+Предлагается возможность выбрать узкую резинку, которая будет вшита в ткань, для создания более индивидуального вида слипов. Также есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские слипы с анатомическим кармашком идеально подходят для повседневного использования или особых случаев, когда нужно выглядеть стильно и чувствовать себя комфортно. Они отлично сочетаются с другими предметами гардероба и добавляют нотку сексуальности в образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="4">
+        <name>Стринги Берлин, цвет Василек</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_vasilek</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_Stringi_iz_mikrofibry_uniseks_Vasilkogo_czveta_ot_Just_Fit_9a03681df1.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги из нашей коллекции - идеальный выбор для мужчин, которые ценят комфорт и стиль. Они выполнены из высококачественной микрофибры василькового цвета, что придает им элегантный и модный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, второй слой изготовлен из основной ткани, чтобы обеспечить дополнительную поддержку и комфорт. Вырезы для ног оснащены мягкой белой резинкой, которая обеспечивает идеальную посадку и комфорт при носке.
+
+По талии расположена широкая белая резинка, которая надежно фиксирует белье и обеспечивает поддержку. По вашему желанию, мы можем использовать узкую резинку, которая будет вшита в ткань, чтобы создать более индивидуальный вид стрингов. Также у вас есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские стринги из нашей коллекции идеально подходят для повседневного использования или особых случаев, когда вы хотите выглядеть стильно и чувствовать себя комфортно. Они прекрасно сочетаются с другими предметами гардероба и добавляют нотку сексуальности в ваш образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="5">
+        <name>Стринги Берлин, JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_indigo</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_stringi_indigo_s_shirokoj_beloj_rezinkoj_s_chasami_i_korobkoj_4a0cd86ae7.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги - идеальный выбор для мужчин, которые ценят комфорт и стиль. Они выполнены из высококачественной микрофибры василькового цвета, что придает им элегантный и модный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, второй слой изготовлен из основной ткани, чтобы обеспечить дополнительную поддержку и комфорт. Вырезы для ног оснащены мягкой белой резинкой, которая обеспечивает идеальную посадку и комфорт при носке.
+
+По талии расположена широкая белая резинка, которая надежно фиксирует белье и обеспечивает поддержку. По вашему желанию, мы можем использовать узкую резинку, которая будет вшита в ткань, чтобы создать более индивидуальный вид стрингов. Также у вас есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские стринги из нашей коллекции идеально подходят для повседневного использования или особых случаев, когда вы хотите выглядеть стильно и чувствовать себя комфортно. Они прекрасно сочетаются с другими предметами гардероба и добавляют нотку сексуальности в ваш образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="6">
+        <name>Стринги Берлин .JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringy_red</url>
+        <price>30</price>
+        <oldprice>30</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_muzhskie_stringi_berlin_ot_Just_Fit_d33dc8b35e.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги из нашей коллекции - идеальный выбор для мужчин, которые ценят комфорт и стиль. Они выполнены из высококачественного хлопка красного цвета, что придает им яркий и модный вид. При заказе  вы можете выбрать кое-какие опции.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, второй слой изготовлен из основной ткани, чтобы обеспечить дополнительную поддержку и комфорт. Вырезы для ног оснащены мягкой белой резинкой, которая обеспечивает идеальную посадку и комфорт при носке.
+
+По талии расположена широкая красная резинка, которая надежно фиксирует белье и обеспечивает поддержку. Можно выбрать широкую белую резинку. По вашему желанию, мы можем использовать узкую резинку, которая будет вшита в ткань, чтобы создать более индивидуальный вид стрингов. Также у вас есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские стринги из нашей коллекции идеально подходят для повседневного использования или особых случаев, когда вы хотите выглядеть стильно и чувствовать себя комфортно. Они прекрасно сочетаются с другими предметами гардероба и добавляют нотку сексуальности в ваш образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="7">
+        <name>Стринги Берлин черные .JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_black</url>
+        <price>29</price>
+        <oldprice>29</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_chernye_stringi_ot_JUST_FIT_93d06ef0f1.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги из нашей коллекции - идеальный выбор для мужчин, которые ценят комфорт и стиль. Они выполнены из высококачественного хлопка черного цвета, что придает им строгий и стильный вид. При заказе  вы можете выбрать кое-какие опции.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, второй слой изготовлен из основной ткани, чтобы обеспечить дополнительную поддержку и комфорт. Вырезы для ног оснащены мягкой белой резинкой, которая обеспечивает идеальную посадку и комфорт при носке.
+
+По талии расположена широкая красная резинка, которая надежно фиксирует белье и обеспечивает поддержку. Можно выбрать широкую белую резинку. По вашему желанию, мы можем использовать узкую резинку, которая будет вшита в ткань, чтобы создать более индивидуальный вид стрингов. Также у вас есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские стринги из нашей коллекции идеально подходят для повседневного использования или особых случаев, когда вы хотите выглядеть стильно и чувствовать себя комфортно. </p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="8">
+        <name>Слипы анатомические </name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/slipy_yellow_anatomic</url>
+        <price>38</price>
+        <oldprice>38</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_Slipy_muzhskie_zheltogo_czveta_plotno_sidyat_po_pope_f5e4ad2731.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские слипы с анатомическим кармашком – это идеальное белье для мужчин, которые ценят комфорт и практичность. Изготовленные из кулирки, которая состоит из хлопка с добавлением лайкры, они обеспечивают максимальную мягкость и эластичность. Желтый цвет придает им стильный и элегантный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, чтобы удовлетворить индивидуальные предпочтения. Вырезы для ног оснащены мягкой резинкой, которая обеспечивает идеальную посадку и комфорт во время носки. По талии расположена широкая белая резинка, которая надежно фиксирует белье и обеспечивает поддержку.
+
+Предлагается возможность выбрать узкую резинку, которая будет вшита в ткань, для создания более индивидуального вида слипов. Также есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские слипы с анатомическим кармашком идеально подходят для повседневного использования или особых случаев, когда нужно выглядеть стильно и чувствовать себя комфортно. Они отлично сочетаются с другими предметами гардероба и добавляют нотку сексуальности в образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="9">
+        <name>Слипы с анатомическим карманом</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/sleepy_red_anatomic</url>
+        <price>38</price>
+        <oldprice>38</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_muzhskie_trusy_slipy_s_anatomicheskim_karmanom_ot_Just_Fit_21e9f3be40.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские слипы с анатомическим кармашком – это идеальное белье для мужчин, которые ценят комфорт и практичность. Изготовленные из кулирки, которая состоит из хлопка с добавлением лайкры, они обеспечивают максимальную мягкость и эластичность. Красный цвет придает им стильный и элегантный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, чтобы удовлетворить индивидуальные предпочтения. Вырезы для ног оснащены мягкой резинкой, которая обеспечивает идеальную посадку и комфорт во время носки. По талии расположена широкая белая резинка, которая надежно фиксирует белье и обеспечивает поддержку.
+
+Предлагается возможность выбрать узкую резинку, которая будет вшита в ткань, для создания более индивидуального вида слипов. Также есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские слипы с анатомическим кармашком идеально подходят для повседневного использования или особых случаев, когда нужно выглядеть стильно и чувствовать себя комфортно. Они отлично сочетаются с другими предметами гардероба и добавляют нотку сексуальности в образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="10">
+        <name>Слипы из сетки</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/setka_black</url>
+        <price>32</price>
+        <oldprice>32</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>13</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_chernye_iz_setki_ot_Justfit_08c57c9fcc.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские слипы из нашей коллекции - отличный выбор для мужчин, которые ценят комфорт и стиль. Они выполнены из бельевой эластичной сетки, что придает им современный и сексуальный вид.
+
+Гульфик дополнительно продублирован слоем из кулирки, что обеспечивает дополнительную поддержку и комфорт. Вырезы для ног и по талии украшены ажурной резинкой, которая придает белью элегантность и обеспечивает идеальную посадку.
+
+Слипы из нашей коллекции идеально подходят для повседневного использования или особых случаев, когда вы хотите выглядеть стильно и чувствовать себя комфортно. Они прекрасно сочетаются с другими предметами гардероба и добавляют нотку сексуальности в ваш образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="11">
+        <name>Слипы анатомические синие</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/sleepy_microfibra_blue</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_slipy_s_karmanom_iz_mikrofibry_9f33881aad.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские слипы с анатомическим кармашком - это идеальный выбор для мужчин, которые ценят комфорт и функциональность. Они выполнены из микрофибры василькового цвета, что придает им стильный и современный вид.
+
+По желанию, можно заменить черный цвет резинки на белый по вырезам для ног, а также выбрать широкую белую резинку по талии. Также возможно выбрать другой цвет материала и сам материал для создания уникального вида.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, где второй слой изготовлен из основной ткани. Это обеспечивает дополнительную поддержку и комфорт во время носки. Вырезы для ног украшены мягкой черной резинкой, которая обеспечивает идеальную посадку и комфорт.
+
+Васильковые мужские слипы с анатомическим кармашком подходят как для повседневного использования, так и для особых случаев. Они прекрасно сочетаются с другими предметами гардероба и добавляют нотку стиля в ваш образ.
+
+Покупайте мужские слипы с анатомическим кармашком из нашей коллекции и наслаждайтесь комфортом и стилем каждый день!</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="12">
+        <name>Стринги Розовые +</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_rose</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_photo_2023_04_29_11_40_03_29a8fae219.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги, выполненные из микрофибры, представляют собой стильное и комфортное белье для мужчин. Они доступны в розовом цвете, что придает им яркий и сексуальный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя. 
+
+Вырезы для ног выполнены с использованием мягкой резинки, обеспечивая идеальную посадку и комфорт при ношении. По талии расположена узкая резинка, которая обеспечивает надежную фиксацию и поддержку.
+
+Помимо стандартного дизайна, предлагается возможность выбрать широкую белую резинку, изменить цвет материала или выбрать другой материал, чтобы создать уникальный и индивидуальный вид стрингов.
+
+Мужские стринги из микрофибры - это отличный выбор для мужчин, которые ценят комфорт, стиль и индивидуальность. Они подходят для повседневного использования или для особых случаев, когда требуется выглядеть особенно привлекательно и сексуально.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="13">
+        <name>Стринги Токио .JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_tokio</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_strinigi_Tokio_2_25a8053937.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги, выполненные из микрофибры, представляют собой стильное и комфортное белье для мужчин. Они доступны в плотном розовом цвете, что придает им яркий и сексуальный вид.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя. 
+
+Вырезы для ног выполнены с использованием мягкой резинки, обеспечивая идеальную посадку и комфорт при ношении. По талии расположена узкая резинка, которая обеспечивает надежную фиксацию и поддержку.
+
+Помимо стандартного дизайна, предлагается возможность выбрать широкую белую резинку, изменить цвет материала или выбрать другой материал, чтобы создать уникальный и индивидуальный вид стрингов.
+
+Мужские стринги из микрофибры - это отличный выбор для мужчин, которые ценят комфорт, стиль и индивидуальность. Они подходят для повседневного использования или для особых случаев, когда требуется выглядеть особенно привлекательно и сексуально.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="14">
+        <name>Слипы Прованс</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/sleepy_provans</url>
+        <price>38</price>
+        <oldprice>38</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_PROVANS_slipy_muzhskie_vid_speredi_s_bokovym_karmanom_c8385bc746.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские слипы с анатомическим кармашком – это идеальное белье для мужчин, которые ценят комфорт и практичность. Изготовленные из кулирки, которая состоит из хлопка с добавлением лайкры, они обеспечивают максимальную мягкость и эластичность. Оригинальный цвет Прованс.
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, чтобы удовлетворить индивидуальные предпочтения. Вырезы для ног оснащены мягкой резинкой, которая обеспечивает идеальную посадку и комфорт во время носки. По талии расположена широкая белая резинка, которая надежно фиксирует белье и обеспечивает поддержку.
+
+Предлагается возможность выбрать узкую резинку, которая будет вшита в ткань, для создания более индивидуального вида слипов. Также есть возможность выбрать другой цвет материала или использовать другой материал для создания уникального вида.
+
+Мужские слипы с анатомическим кармашком идеально подходят для повседневного использования или особых случаев, когда нужно выглядеть стильно и чувствовать себя комфортно. Они отлично сочетаются с другими предметами гардероба и добавляют нотку сексуальности в образ.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="15">
+        <name>Стринги зауженные</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringy_orange</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_orandevye_stringi_na_manikene_speredi_anatomicheskij_karman_c3b168905b.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги из кулирки оранжевого цвета с небольшим анатомическим кармашком - это стильный и удобный выбор для мужчин, которые ценят комфорт и сексуальность. Они выполнены из высококачественной кулирки. 
+
+Гульфик может быть выполнен как в один слой, так и в два слоя, где второй слой будет изготовлен из основной ткани. Это обеспечивает дополнительную поддержку и комфорт во время носки. Углубленный вырез для ног и узкая боковая часть делают данную модель особенно сексуальной. Вырезы для ног украшены мягкой белой резинкой, обеспечивающей идеальную посадку и комфорт.
+
+По желанию, можно выбрать другой цвет материала и сам материал для создания уникального вида. Также возможно выбрать узкую или широкую резинку по талии, чтобы подчеркнуть ваш стиль.
+
+Мужские стринги оранжевого цвета подходят как для повседневного использования, так и для особых случаев. Они прекрасно сочетаются с другими предметами гардероба и добавляют нотку стиля в ваш образ.
+
+Покупайте мужские стринги из нашей коллекции и наслаждайтесь комфортом и сексуальностью каждый день!</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="16">
+        <name>Кружевные стринги "Милан"</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/kruzevo_stringi</url>
+        <price>48</price>
+        <oldprice>48</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>13</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_muzhskoe_kruzhevnoe_bele_ot_JF_temnosinego_czveta_bb2ae4ae22.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Приглашаем вас ознакомиться с нашей новой моделью мужских стринг из эластичного кружева темно-синего цвета. Эти стринги не только обеспечат вам комфорт и свободу движений, но и добавят особую изюминку в ваш образ.
+
+Гульфик данной модели может быть продублирован чёрной микрофиброй или хлопком, что придаст дополнительный комфорт и функциональность. Талия и вырезы для ног украшены ажурной бельевой резинкой, которая придаёт этим стрингам элегантность и стиль.
+
+Особый акцент на этой модели создают кружевные фестоны по бокам, которые придают стрингам неповторимую сексуальность и привлекательность. Благодаря отсутствию боковых швов, эти стринги обеспечивают идеальную посадку на теле и не вызывают дискомфорта.
+
+Мужские стринги из нашей коллекции - это не только предмет нижнего белья, но и способ выразить свою индивидуальность и стиль. Не упустите возможность приобрести эту модель и добавить немного сексуальности в свою жизнь.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="17">
+        <name>Кружевные стринги Милан</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/kruzevo_stringi_yellow</url>
+        <price>48</price>
+        <oldprice>48</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>13</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_muzhskie_kruzhevnye_trusiki_ot_JF_62b7ccf15a.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Представляем мужские стринги из эластичного кружева желтого цвета. Эти стринги не только обеспечат вам комфорт и свободу движений, но и добавят особую изюминку в ваш образ.
+
+Особый акцент на этой модели создают кружевные фестоны по бокам, которые придают стрингам неповторимую сексуальность и привлекательность. Благодаря отсутствию боковых швов, эти стринги обеспечивают идеальную посадку на теле и не вызывают дискомфорта.
+
+Гульфик данной модели может быть продублирован чёрной микрофиброй или хлопком, что придаст дополнительный комфорт и функциональность. Талия и вырезы для ног украшены ажурной бельевой резинкой, которая придаёт этим стрингам элегантность и стиль.
+
+Мужские стринги из нашей коллекции - это не только предмет нижнего белья, но и способ выразить свою индивидуальность и стиль. Не упустите возможность приобрести эту модель и добавить немного сексуальности в свою жизнь.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="18">
+        <name>Мужские анатомические слипы. JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/sleepy_anatomic_cotton_blue</url>
+        <price>38</price>
+        <oldprice>38</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_slipy_anatomicheskie_4e4440df86.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Трусы выполнены из хлопка, что делает их очень мягкими и комфортными. Анатомический карман - это особая особенность этих трусов, которая обеспечивает дополнительную поддержку и комфорт во время активного образа жизни.  Он поможет вам чувствовать себя уверенно и комфортно в любой ситуации.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="19">
+        <name>Стринги Токио 2</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_rose_bigstripe</url>
+        <price>42</price>
+        <oldprice>42</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_strinigi_rozovye_muzhskie_vid_speredi_tolstaya_belaya_rezinka_98aadb06d6.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги, выполненные из микрофибры, представляют собой стильное и комфортное белье для мужчин.
+Они доступны в плотном розовом цвете, что придает им яркий и сексуальный вид. Вырезы для ног выполнены с использованием мягкой резинки, обеспечивая идеальную посадку и комфорт при ношении. По талии расположена широкая резинка, которая обеспечивает надежную фиксацию и поддержку. Резинку можно сделать тонкой, как в стрингах Токио 2, также можно изменить цвет материала или выбрать другой материал, чтобы создать уникальный и индивидуальный вид стрингов.
+Мужские стринги из микрофибры - это отличный выбор для мужчин, которые ценят комфорт, стиль и индивидуальность. Они подходят для повседневного использования или для особых случаев, когда требуется выглядеть особенно привлекательно и сексуально.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="20">
+        <name>Cлипы классические</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/slipy_fioletovie</url>
+        <price>32</price>
+        <oldprice>32</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>10</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_IMG_20230731_082207_1_d8854e66e3.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Классические мужские слипы из высококачественной хлопковой ткани. Впереди присутствует выточка, изнутри все швы закрыты. Нет болтающихся кусков ткани.
+Трусы крепкого и строгого кроя. Очень приятные тактильно. Ощущаются уверенно и крепко. Вы можете выбрать цвет при заказе, а также изменить резинку сверху. Ее можно сделать вшитой и тонкой.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="21">
+        <name>Стринги, сетка. JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/stringi_setka1</url>
+        <price>45</price>
+        <oldprice>45</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>11</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_muzhskie_stringi_iz_setki_chernye_655d849704.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские стринги на регуляторах из чёрной сетки - это отличный выбор для тех, кто хочет выглядеть стильно и сексуально. Чёрная сетка придаёт стрингам загадочность и соблазнительность, а регуляторы позволяют регулировать размер.
+
+Комфортная широкая передняя часть дополнена маленькой и сексуальной сеткой сзади.
+
+Наши стринги изготовлены из качественных материалов, которые обеспечивают комфорт и долговечность изделия. Кроме того, они легко стираются и сохраняют свою форму даже после многократных стирок.
+
+Мужские стринги на регуляторах из чёрной сетки подходят как для повседневной носки, так и для особых случаев. Они прекрасно подчёркивают мужскую фигуру и придают уверенности в себе.
+
+Индивидуальный размер.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="22">
+        <name>Боксеры. JF</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/boxer_classsic_1</url>
+        <price>48</price>
+        <oldprice>48</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>12</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_Krasnye_boksery_ot_just_fit_plotno_ogibayut_yagodiczy_3df6645b26.jpg</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Мужские боксеры, плотной, облигающей посадки. Возможен индивидуальный пошив или по стандартной размерной сетке. Доставка почтой.
+
+На трусах присутствует выточка, ткань мягкая и тянется. Отлично сидят и не жмут. 
+
+Верхняя резинка также может быть вшита, при этом высота посадки не меняется и все также отвечает вашим меркам.</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer><offer id="23">
+        <name>Ретро-тонг</name>
+        <vendor>JF</vendor>
+
+        <url>https://just-fit.by/good/retro_tong</url>
+        <price>50</price>
+        <oldprice>50</oldprice>
+        <enable_auto_discounts>false</enable_auto_discounts>
+        <currencyId>BYN</currencyId>
+        <categoryId>13</categoryId>
+        <available>true</available>
+        <picture>https://api.just-fit.by/uploads/medium_Muzhskoe_kruzhevnoe_bele_retro_tong_ot_Just_fit_c7b10a6e03.WebP</picture>
+        <delivery>true</delivery>
+        <description>
+        <![CDATA[          
+            <p>Изготовление новых кружевных, мужских трусов модели ретро-тонг.
+Элегантные мужские трусики ретро-тонг из кружева. Особенностью данной модели является широкий кружевной пояс вокруг вашего тела. Трусы имеют специальные элементы для удобства ношения мужчинами. Присутствует выточка, добавляющая немного пространства спереди. Дополнительное кружево обладает достаточной эластичностью. Вместе с возможностью пошить по индивидуальному размеру, вы можете получить очень комфортное белье!
+
+Ключевые особенности:
+--
+Цвет: Кружево может быть темно-синего или бежевого цвета.
+--
+Кружево:  Кружево качественное, мягкое из Европы.
+--
+Размеры:
+Можно изготовить по стандартной российской размерной сетке.
+Можно по индивидуальным меркам, есть видео инструкция как снять мерки!</p>
+        ]]>
+        </description>                
+        <manufacturer_warranty>true</manufacturer_warranty>
+        <weight>0.2</weight>
+        <dimensions>5/5/5</dimensions>
+        </offer></offers>
+</shop>
+</yml_catalog>

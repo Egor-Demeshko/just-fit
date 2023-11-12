@@ -28,10 +28,10 @@ itemtype="https://schema.org/Offer">
 <style>
     .prices{
         position: absolute;
-        top: 12px;
+        top: 8px;
         right: 12px;
-        width: 150px;
-        height: 111px;
+        width: 125px;
+        height: 100px;
     }
 
 
@@ -46,22 +46,22 @@ itemtype="https://schema.org/Offer">
         height: 50px;
         width: 60px;
         z-index: 1;
-        border-radius: 25%;
+        border-radius: 10px;
     }
 
 
     .current{
         position: absolute;
-        height:60px;
-        width: 130px;
+        height:50px;
+        width: 80px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: var(--icons-main-red);
-        top: 30px;
+        top: 10px;
         right: 0;
         z-index: 5;
-        border-radius: 25%;
+        border-radius: 10px;
     }
 
 
@@ -73,7 +73,7 @@ itemtype="https://schema.org/Offer">
 
 
     .normal_font{
-        font-size: 36px;
+        font-size: 24px;
     }
 
 

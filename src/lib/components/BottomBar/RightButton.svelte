@@ -19,8 +19,8 @@
         display: flex;
         color: var(--background-main-white);
         fill: none;
-        width: 85px;
-        height: 60px;
+        width: 70px;
+        height: 42px;
         justify-content: flex-end;
         align-items: center;
     }

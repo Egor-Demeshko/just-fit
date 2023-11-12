@@ -1,6 +1,5 @@
 import { strapi } from "strapi-sdk-js";
 
-
 export function load({ locals, pageMeta }){
 
     if(!locals){

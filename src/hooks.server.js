@@ -26,7 +26,11 @@ export async function handle({ event, resolve }) {
 
     if(event.url.pathname == "/"){
         event.locals = await strapi.find("goods", {
-            "populate": ["images", "SEO"]
+            "populate": ["images", "SEO"],
+            "pagination": {
+                "page": 1,
+                "pageSize": 9
+            }
         });
         event.pageMeta = await strapi.find("seo-straniczs", {
             "filters": {

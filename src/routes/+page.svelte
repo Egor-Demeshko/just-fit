@@ -1,20 +1,77 @@
 <script>
     import BottomBar from '$lib/components/BottomBar/BottomBar.svelte';
-    import Filter from '$lib/components/Filter.svelte';
     import ContactBar from '$lib/components/ContactBar.svelte';
     import Catalog from '$lib/components/Catalog.svelte';
+    import ScrollToFilter from '$lib/components/ScrollToFilter.svelte';
+    import Pagination, {paginationStore} from '$lib/components/Pagination/Pagination.svelte';
+    import HTTPGood from "$lib/scripts/HTTP/HTTPGood.js";
   
     /** @type {Array}
      * @description массив товаро из базы.
     */
     export let data;
-
     let goods = data.locals.data.map( (value) => value.attributes); 
     let pageMeta = data.pageMeta.data[0].attributes;
+    let pagination = data.locals.meta.pagination;
+
+    if(pagination){
+        paginationStore.set({
+            page: pagination.page,
+            pageCount: pagination.pageCount,
+            pageSize: pagination.pageSize,
+            total: pagination.total
+        })
+    }
     //console.log("META META META   pageMeta on page!!!", pageMeta);
 
+    /**обрабатывает событие pagination_gange*/
+    async function loadPartGoods({detail}){
+        document.dispatchEvent( new CustomEvent("loader"));
+        /*можем покинуть страницу, а запрос еще не обработан*/
+        if(window.location.pathname !== "/") return;
+
+        const result = await HTTPGood.getNextGoods(detail);
+
+        if(result){
+            sortLoadedData(result);
+        }
+        document.dispatchEvent( new CustomEvent("loader"));
+    }
+
+    /**обрабатывает событие pagination_all*/
+    async function loadAll(){
+        document.dispatchEvent( new CustomEvent("loader"));
+        if(window.location.pathname !== "/") return;
+        const result = await HTTPGood.getAllGoods();   
+        
+        if(result){
+            sortLoadedData(result);
+        }
+        document.dispatchEvent( new CustomEvent("loader"));
+    }
+
+
+    function sortLoadedData({data, meta}){
+        
+            goods = data.map( (value) => value.attributes);
+            let paginationData = meta.pagination;
+
+            paginationStore.update( (paginationObj) => {
+                /**обновляем данные в сторе, дабы поменялась отображение пагинации*/
+                paginationObj.page = paginationData.page;
+                paginationObj.pageCount = paginationData.pageCount;
+                paginationObj.pageSize = paginationData.pageSize;
+                paginationObj.total = paginationData.total;
+                return paginationObj;
+            });
+    }
 
  </script> 
+
+ <svelte:document on:pagination_gange={loadPartGoods}
+ on:pagination_all={loadAll}></svelte:document>
+
+
  <svelte:head>
     <script type="application/ld+json">
         {
@@ -60,16 +117,21 @@
  </svelte:head>   
 
 
+<div>
+    <Pagination/>
 
-<Filter/>
-
-<Catalog {goods}/>
-
-<BottomBar/>
-
-<ContactBar/>
-
+    <ScrollToFilter/>
+    
+    <Catalog {goods}/>
+    
+    <BottomBar/>
+    
+    <ContactBar/>
+    
+</div>
 
 <style>
-
+    div{
+        padding-bottom: 120px;
+    }
 </style>
