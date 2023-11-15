@@ -1,6 +1,7 @@
 <script>
     import { menuOpen } from "$lib/scripts/stores.js";
     import RunningLine from "$lib/components/Loaders/RunningLine.svelte";
+    import Tooltip, {tooltipStore} from "$lib/components/Tooltip.svelte";
 
     /**флаг который отвечает за лоадер*/
     let loaderActive = false;
@@ -11,7 +12,16 @@
         if(value) return false;
         if(!value) return true;
       });
-    }
+  }
+
+  function copyToClipboard(e){
+    const target = e.target;
+    const coors = target.getBoundingClientRect();
+    const link = target.previousElementSibling;
+    tooltipStore.set({left: coors.left, top: coors.top, width: coors.width, height: coors.height});
+
+    navigator.clipboard.writeText(link.getAttribute("href"));
+  }
     
     
 </script>
@@ -22,33 +32,40 @@
 <header class="upperBar">
 
     <address>
-        <a class="contact" href="tel:+375296107173">+375296107173</a>
-        <a class="contact" href="tel:+375292752562">+375292752562</a>
+        <Tooltip/>
+        <div class="contact" >
+          <a class="contact__link" href="tel:+375296107173">+375296107173</a>
+          <svg viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg" on:click={copyToClipboard}
+          role="button" aria-label="Скопировать номер телефона +375296107173 в буфер обмена">
+            <path d="M2.60076 5.42165L2.6 22.1C2.6 25.5463 5.28199 28.3661 8.67262 28.5862L9.1 28.6L20.5774 28.6018C20.0415 30.1156 18.5974 31.2 16.9 31.2H7.8C3.49218 31.2 0 27.7078 0 23.4V9.1C0 7.40163 1.08561 5.95682 2.60076 5.42165ZM22.1 0C24.2539 0 26 1.74609 26 3.9V22.1C26 24.2539 24.2539 26 22.1 26H9.1C6.94609 26 5.2 24.2539 5.2 22.1V3.9C5.2 1.74609 6.94609 0 9.1 0H22.1ZM22.1 2.6H9.1C8.38203 2.6 7.8 3.18203 7.8 3.9V22.1C7.8 22.818 8.38203 23.4 9.1 23.4H22.1C22.818 23.4 23.4 22.818 23.4 22.1V3.9C23.4 3.18203 22.818 2.6 22.1 2.6Z" fill="white"/>
+          </svg>
+        </div>
+        <div class="contact">          
+          <a class="contact__link" href="tel:+375292158632" aria-label="Позвонить через мобильного оператора МТС">+375292158632</a>
+          <svg viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg" on:click={copyToClipboard}
+          role="button" aria-label="Скопировать номер телефона +375292158632 в буфер обмена">
+            <path d="M2.60076 5.42165L2.6 22.1C2.6 25.5463 5.28199 28.3661 8.67262 28.5862L9.1 28.6L20.5774 28.6018C20.0415 30.1156 18.5974 31.2 16.9 31.2H7.8C3.49218 31.2 0 27.7078 0 23.4V9.1C0 7.40163 1.08561 5.95682 2.60076 5.42165ZM22.1 0C24.2539 0 26 1.74609 26 3.9V22.1C26 24.2539 24.2539 26 22.1 26H9.1C6.94609 26 5.2 24.2539 5.2 22.1V3.9C5.2 1.74609 6.94609 0 9.1 0H22.1ZM22.1 2.6H9.1C8.38203 2.6 7.8 3.18203 7.8 3.9V22.1C7.8 22.818 8.38203 23.4 9.1 23.4H22.1C22.818 23.4 23.4 22.818 23.4 22.1V3.9C23.4 3.18203 22.818 2.6 22.1 2.6Z" fill="white"/>
+          </svg>
+        </div>
     </address>
 
 
-    <a class="logo" title="Перейти на главную страницу" href='/'>
-        <svg class="logo__inner" alt="логотип Just Fit">
-            <use href="/lib/icons/logo/logo.svg#logo"></use>
-        </svg>   
-    </a>
+    <div class="logo__wrapper">
+      <a class="logo" title="Перейти на главную страницу" href='/'>
+          <svg class="logo__inner" alt="логотип Just Fit">
+              <use href="/lib/icons/logo/logo.svg#logo"></use>
+          </svg>   
+      </a>
+    </div>
 
 
     <div class="right">
-        <a class="mail" href="mailto:mail@just-fit.by" aria-label="Написать на почту mail@just-fit.by"
-        >mail@just-fit.by</a>
+        <!--<a class="mail" href="mailto:mail@just-fit.by" aria-label="Написать на почту mail@just-fit.by"
+        >mail@just-fit.by</a>-->
         <div class="menu" aria-label="открывает меню" role="button" on:click={openMenu}>
             <svg class="icon" aria-disabled="true">
                 <use href="/lib/icons/navigation.svg#menu"></use>
             </svg>
-        </div>
-        <div class="delivery">
-          <a href="/delivery" aria-label="Перейти на описание условий доставки" 
-          title="Перейти на страницу описания доставки">
-            <svg class="icon">
-                <use href="/lib/icons/navigation.svg#delivery"></use>
-            </svg>
-          </a>  
         </div>
     </div>
 
@@ -82,14 +99,6 @@
         z-index: 10;
     }
 
-  .closed{
-    animation: 600ms ease-in forwards upper-closed;
-  }
-
-  .opens{
-    animation: 600ms ease-out forwards upper-opens;
-  }
-
   .logo{
     color: var(--icons-main-red);
   }
@@ -97,7 +106,7 @@
 
   .logo__inner{
     width: 100%;
-    max-block-size: 3.5rem;
+    height: 3.5rem;
   }
 
 
@@ -112,7 +121,7 @@
     display: flex;
   }
 
-  .menu, .delivery{
+  .menu{
     justify-content: center;
     align-items: center;
   }
@@ -120,35 +129,19 @@
   address{
     display: none;
     grid-template-columns: 1fr 1fr;
-  }
-
-  address, .mail{
     text-decoration: none;
     font-family: Inter, sans-serif;
     font-style: normal;
     font-size: 1rem;
     color: inherit;
     text-align: center;
-  }
-
-  .mail:hover{
-    text-shadow: var(--orange-shadow);
-    transition: all 600ms ease;
+    position: relative;
   }
 
   .right{
     display: grid;
     grid-template-columns: auto, calc(var(--pcWidth)), calc(var(--pcWidth));
   }
-
-  .mail{
-    display: none;
-  }
-
-  .delivery{
-    display: none;
-  }
-
 
   .lines_wrapper{
     width: 100%;
@@ -159,12 +152,15 @@
 
   @media(min-width: 32em){
     .upperBar{
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
+      display: flex;
       align-items: center;
+      align-content: center;
       background-color: var(--background-green);
       color: var(--icons-white);
-      height: calc(var(--pcWidth));
+      height: 4.25rem;
+      gap: clamp(1rem, 15.8vw, 19rem);
+      padding: 0;
+      box-shadow: none;
     }
 
     .icon{
@@ -178,27 +174,48 @@
       color: inherit;
     }
 
-    .contact, .mail{
-      align-self: center;
+    .contact{
+      display: flex;
+      align-items: center;
+      justify-content: center;
       padding: 0.5rem 0.75rem;
+      color: inherit;
+      gap: 1rem;
+      height: inherit;
+    }
+
+    .contact__link{
       text-decoration: none;
+      cursor: pointer;
       color: inherit;
     }
 
+    .contact svg{
+      display: none;
+    }
+
     .right{
-      display: grid;
-      grid-template-columns: 1fr auto auto;
+      display: flex;
       align-items: center;
+      justify-content: end;
     }
   }
 
   @media(min-width: 40em){
-    .contact, .mail{
-      font-size: 1.2rem;
+    .logo__wrapper{
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--background-green);
+      border-radius: 0 0 30px 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 21rem;
     }
 
-    .mail{
-      font-weight: bold;
+    .contact{
+      font-size: 1.2rem;
     }
 
     .logo{
@@ -211,11 +228,13 @@
 
 
     .logo__inner{
-      max-block-size: 5.5rem;
+      width: clamp(6.5rem, 12.65vw, 15.2rem);
+      height: clamp(3.75rem, 3.9vw, 4.75rem);
     }
 
-    .delivery, .menu{
+    .menu{
       display: flex;
+      width: 7.5rem;
     }
 
     .icon{
@@ -227,43 +246,44 @@
     }
   }
 
-  @media(min-width: 56em){
-    .mail{
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  @media(min-width: 52em){
+
+    .upperBar{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      
+    }
+
+    .logo__wrapper{
+      position: absolute;
+      padding: 0 3rem .875rem;
+    }
+
+    address{
+      height: inherit;
     }
   }
 
   @media(min-width: 71.5em){
-    .upperBar{
-      padding: 18px 0px 18px 24px;
-    }
 
     address{
       flex-flow: row;
       justify-content: space-around;
-      gap: 3rem;
+      gap: clamp(.5rem, 2.5vw, 3rem);
     }
 
     .contact{
       flex: 1;
     }
 
-    .contact, .mail{
+    .contact{
       font-size: 1.5rem;
     }
 
-    .contact{
-      border-top: var(--border);
-      border-bottom: var(--border);
-      border-radius: 16px;
-    }
-
-    .contact:hover{
-      color: var(--hard-black);
-      background-color: var(--icons-white);
-      transition: ease 600ms all;
+    .contact svg{
+      display: block;
+      height: 60%;
+      cursor: pointer;
     }
 
     .icon{

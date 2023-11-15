@@ -334,7 +334,7 @@ aria-label="Форма ввода и проверки вашего заказа 
     @media(min-width: 52em){
         .cart{
             font-size: 1.5rem;
-            padding: calc(var(--pcWidth) + 2em) 20vw 150px;
+            padding: 2rem 20vw 120px;
         }
 
 

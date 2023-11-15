@@ -39,7 +39,7 @@
                     {#if i === (pageNumber - 1)}
                         <PaginationElement number={i} active={true}/>
                     {:else}
-                        <PaginationElement number={i}/>
+                        <PaginationElement number={i} active={false}/>
                     {/if}
                 {/each}
             {/if}
